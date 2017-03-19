@@ -1,0 +1,10 @@
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\bin\Debug\PlayBetWin Administrador.exe.config
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\bin\Debug\PlayBetWin Administrador.exe
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\bin\Debug\PlayBetWin Administrador.pdb
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin Administrador.csprojResolveAssemblyReference.cache
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin_Administrador.frmLogin.resources
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin_Administrador.Properties.Resources.resources
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin Administrador.csproj.GenerateResource.Cache
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin Administrador.exe
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin Administrador.pdb
+C:\Users\Sergio\Desktop\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin_Administrador.frmPrincipal.resources
