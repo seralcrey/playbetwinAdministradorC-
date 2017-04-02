@@ -31,6 +31,8 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btAbrirDeporte = new System.Windows.Forms.Button();
+            this.btAnadirDeporte = new System.Windows.Forms.Button();
             this.tablaDeportes = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -76,6 +78,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btAbrirDeporte);
+            this.tabPage1.Controls.Add(this.btAnadirDeporte);
             this.tabPage1.Controls.Add(this.tablaDeportes);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -85,8 +89,29 @@
             this.tabPage1.Text = "Deportes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btAbrirDeporte
+            // 
+            this.btAbrirDeporte.Location = new System.Drawing.Point(523, 36);
+            this.btAbrirDeporte.Name = "btAbrirDeporte";
+            this.btAbrirDeporte.Size = new System.Drawing.Size(486, 23);
+            this.btAbrirDeporte.TabIndex = 2;
+            this.btAbrirDeporte.Text = "Abrir deporte selecionado";
+            this.btAbrirDeporte.UseVisualStyleBackColor = true;
+            this.btAbrirDeporte.Click += new System.EventHandler(this.btAbrirDeporte_Click);
+            // 
+            // btAnadirDeporte
+            // 
+            this.btAnadirDeporte.Location = new System.Drawing.Point(522, 6);
+            this.btAnadirDeporte.Name = "btAnadirDeporte";
+            this.btAnadirDeporte.Size = new System.Drawing.Size(487, 23);
+            this.btAnadirDeporte.TabIndex = 1;
+            this.btAnadirDeporte.Text = "Añadir deporte";
+            this.btAnadirDeporte.UseVisualStyleBackColor = true;
+            this.btAnadirDeporte.Click += new System.EventHandler(this.btAnadirDeporte_Click);
+            // 
             // tablaDeportes
             // 
+            this.tablaDeportes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaDeportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaDeportes.Dock = System.Windows.Forms.DockStyle.Left;
             this.tablaDeportes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
@@ -135,6 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1025, 538);
             this.Controls.Add(this.toolStripContainer1);
             this.MainMenuStrip = this.menuStrip1;
@@ -164,5 +190,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.DataGridView tablaDeportes;
+        private System.Windows.Forms.Button btAnadirDeporte;
+        private System.Windows.Forms.Button btAbrirDeporte;
     }
 }

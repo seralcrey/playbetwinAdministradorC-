@@ -1,4 +1,5 @@
 ﻿using PlayBetWin_Administrador.Conexiones;
+using PlayBetWin_Administrador.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,11 +55,25 @@ namespace PlayBetWin_Administrador
                 }
             }
 
+            b.Desconectar();
             
         }
 
-
+        //Cuando se da dos click en una misma celda, se habre una ventana donde se podra ver la información
+        //del deporte, editar o borrar.
         private void tablaDeportes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            MessageBox.Show(tablaDeportes.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        //Abre una ventana donde se podra añadir un deporte
+        private void btAnadirDeporte_Click(object sender, EventArgs e)
+        {
+            new frmAnadirDeporte(this).Show();
+        }
+
+        private void btAbrirDeporte_Click(object sender, EventArgs e)
         {
             MessageBox.Show(tablaDeportes.CurrentRow.Cells[0].Value.ToString());
         }

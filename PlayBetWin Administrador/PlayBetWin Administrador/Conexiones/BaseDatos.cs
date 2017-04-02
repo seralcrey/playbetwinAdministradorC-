@@ -71,5 +71,45 @@ namespace PlayBetWin_Administrador.Conexiones
             }
             return lista;
         }
+
+        //Se usa para eliminar, insertar o modificar 
+        public void modificarTablas(String sentencia)
+        {
+            MySqlCommand c = new MySqlCommand();
+            c.Connection = cnx;
+            c.CommandText = sentencia;
+            c.ExecuteNonQuery();
+        }
+
+        //Para comprobar si ya existe
+        public bool existe(String consulta)
+        {
+            bool noEncontrado = true;
+
+            MySqlCommand c = new MySqlCommand();
+            MySqlDataReader d;
+            try
+            {
+                c.Connection = cnx;
+                c.CommandText = consulta;
+                d = c.ExecuteReader();
+                if (d.HasRows)
+                {
+                    while (d.Read())
+                    {
+                        noEncontrado = false;
+                        break; 
+                    }
+
+                }
+                d.Close();
+            }
+            catch (MySqlException ex)
+            {
+
+            }
+
+            return noEncontrado; 
+        }
     }
 }

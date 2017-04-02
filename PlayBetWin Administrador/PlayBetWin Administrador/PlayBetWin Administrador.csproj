@@ -50,6 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexiones\BaseDatos.cs" />
+    <Compile Include="Formularios\frmAbrirDeporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAbrirDeporte.Designer.cs">
+      <DependentUpon>frmAbrirDeporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirDeporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirDeporte.Designer.cs">
+      <DependentUpon>frmAnadirDeporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +77,12 @@
     <Compile Include="Modelos\Deporte.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmAbrirDeporte.resx">
+      <DependentUpon>frmAbrirDeporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAnadirDeporte.resx">
+      <DependentUpon>frmAnadirDeporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
