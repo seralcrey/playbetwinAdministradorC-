@@ -34,6 +34,7 @@
             this.btBorrar = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
             this.btGuardar = new System.Windows.Forms.Button();
+            this.checActivado = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -55,12 +56,13 @@
             // 
             // btEditar
             // 
-            this.btEditar.Location = new System.Drawing.Point(35, 226);
+            this.btEditar.Location = new System.Drawing.Point(15, 226);
             this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(75, 23);
+            this.btEditar.Size = new System.Drawing.Size(95, 23);
             this.btEditar.TabIndex = 2;
-            this.btEditar.Text = "Editar";
+            this.btEditar.Text = "Habilitar editar";
             this.btEditar.UseVisualStyleBackColor = true;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // btBorrar
             // 
@@ -70,6 +72,7 @@
             this.btBorrar.TabIndex = 3;
             this.btBorrar.Text = "Borrar";
             this.btBorrar.UseVisualStyleBackColor = true;
+            this.btBorrar.Click += new System.EventHandler(this.btBorrar_Click);
             // 
             // btSalir
             // 
@@ -79,22 +82,39 @@
             this.btSalir.TabIndex = 4;
             this.btSalir.Text = "Salir";
             this.btSalir.UseVisualStyleBackColor = true;
+            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
             // btGuardar
             // 
-            this.btGuardar.Location = new System.Drawing.Point(196, 52);
+            this.btGuardar.Enabled = false;
+            this.btGuardar.Location = new System.Drawing.Point(197, 103);
             this.btGuardar.Name = "btGuardar";
             this.btGuardar.Size = new System.Drawing.Size(75, 23);
             this.btGuardar.TabIndex = 5;
             this.btGuardar.Text = "Guardar";
             this.btGuardar.UseVisualStyleBackColor = true;
-            this.btGuardar.Visible = false;
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
+            // 
+            // checActivado
+            // 
+            this.checActivado.AutoSize = true;
+            this.checActivado.Checked = true;
+            this.checActivado.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checActivado.Enabled = false;
+            this.checActivado.Location = new System.Drawing.Point(15, 51);
+            this.checActivado.Name = "checActivado";
+            this.checActivado.Size = new System.Drawing.Size(68, 17);
+            this.checActivado.TabIndex = 6;
+            this.checActivado.Text = "Activado";
+            this.checActivado.UseVisualStyleBackColor = true;
             // 
             // frmAbrirDeporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.checActivado);
             this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btBorrar);
@@ -102,7 +122,7 @@
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label1);
             this.Name = "frmAbrirDeporte";
-            this.Text = "frmAbrirDeporte";
+            this.Text = "Editar deporte";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +136,6 @@
         private System.Windows.Forms.Button btBorrar;
         private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.Button btGuardar;
+        private System.Windows.Forms.CheckBox checActivado;
     }
 }

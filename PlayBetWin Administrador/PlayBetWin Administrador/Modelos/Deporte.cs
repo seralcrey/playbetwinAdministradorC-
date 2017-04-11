@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace PlayBetWin_Administrador.Modelo
 {
-    class Deporte
+    public class Deporte
     {
         public int id { get; set; }
         public string nombre { get; set; }
         public bool activado { get; set; }
 
+        public Deporte (int id, string nombre, bool activado)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.activado = activado;
+        }
+
+        
     }
 }

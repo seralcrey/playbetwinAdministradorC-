@@ -1,5 +1,6 @@
 ﻿using PlayBetWin_Administrador.Conexiones;
 using PlayBetWin_Administrador.Formularios;
+using PlayBetWin_Administrador.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,8 +64,14 @@ namespace PlayBetWin_Administrador
         //del deporte, editar o borrar.
         private void tablaDeportes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            MessageBox.Show(tablaDeportes.CurrentRow.Cells[0].Value.ToString());
+
+            int id = Int32.Parse(tablaDeportes.CurrentRow.Cells[0].Value.ToString());
+            string nombre = tablaDeportes.CurrentRow.Cells[1].Value.ToString();
+            bool activado = Boolean.Parse(tablaDeportes.CurrentRow.Cells[2].Value.ToString());
+
+            Deporte depor = new Deporte(id, nombre, activado);
+
+            new frmAbrirDeporte(this, depor).Show();
         }
 
         //Abre una ventana donde se podra añadir un deporte
@@ -75,7 +82,14 @@ namespace PlayBetWin_Administrador
 
         private void btAbrirDeporte_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(tablaDeportes.CurrentRow.Cells[0].Value.ToString());
+            int id = Int32.Parse(tablaDeportes.CurrentRow.Cells[0].Value.ToString());
+            string nombre = tablaDeportes.CurrentRow.Cells[1].Value.ToString();
+            bool activado = Boolean.Parse(tablaDeportes.CurrentRow.Cells[2].Value.ToString());
+
+            Deporte depor = new Deporte(id, nombre,activado);
+
+            new frmAbrirDeporte(this, depor).Show();
+
         }
     }
 }
