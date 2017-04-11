@@ -20,6 +20,8 @@ namespace PlayBetWin_Administrador
         {
             InitializeComponent();
             rellenarTablaDeportes();
+            rellenarTablaCompeticiones();
+
         }
 
 
@@ -90,6 +92,56 @@ namespace PlayBetWin_Administrador
 
             new frmAbrirDeporte(this, depor).Show();
 
+        }
+
+
+        /*********************************
+         *          Competiciones
+         ********************************/
+        public void rellenarTablaCompeticiones()
+        {
+            int r = b.Conectar();
+
+            if (r == -1)
+            {
+                MessageBox.Show("No se ha podido establecer conexión con la BD");
+            }
+            else
+            {
+                List<List<String>> deportes = b.cogerLista("SELECT competiciones.id, competiciones.nombre, competiciones.activado, deportes.nombre FROM deportes LEFT JOIN competiciones on deportes.id = competiciones.id_deporte");
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("ID").ReadOnly = true;
+                dt.Columns.Add("Nombre").ReadOnly = true;
+                dt.Columns.Add("Deporte").ReadOnly = true;
+                dt.Columns.Add("Activado").ReadOnly = true;
+
+
+
+                tablaCompeticion.DataSource = dt;
+                for (int i = 0; i < deportes.Count; i++)
+                {
+                    DataRow row = dt.NewRow();
+                    row["ID"] = deportes[i][0];
+                    row["Nombre"] = deportes[i][1];
+                    row["Activado"] = deportes[i][2];
+                    row["Deporte"] = deportes[i][3];
+                    dt.Rows.Add(row);
+                }
+            }
+
+            b.Desconectar();
+
+        }
+
+        private void btAnadirCompeticion_Click(object sender, EventArgs e)
+        {
+            new frmAnadirCompeticion().Show();
+        }
+
+        private void toolStripSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

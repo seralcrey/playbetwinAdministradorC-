@@ -32,3 +32,4 @@ C:\Users\Sergio\Desktop\playbetwinAdministradorC-\PlayBetWin Administrador\PlayB
 C:\Users\Sergio\Desktop\playbetwinAdministradorC-\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin_Administrador.Formularios.frmAnadirDeporte.resources
 C:\Users\Sergio\Desktop\playbetwinAdministradorC-\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin_Administrador.Formularios.frmAbrirDeporte.resources
 C:\Users\Sergio\Desktop\playbetwinAdministradorC-\PlayBetWin Administrador\PlayBetWin Administrador\bin\Debug\MySql.Data.dll
+C:\Users\Sergio\Desktop\playbetwinAdministradorC-\PlayBetWin Administrador\PlayBetWin Administrador\obj\Debug\PlayBetWin_Administrador.Formularios.frmAnadirCompeticion.resources

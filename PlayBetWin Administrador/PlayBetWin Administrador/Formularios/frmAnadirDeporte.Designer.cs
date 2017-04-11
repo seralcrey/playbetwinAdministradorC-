@@ -69,7 +69,7 @@
             this.btGuradar.Name = "btGuradar";
             this.btGuradar.Size = new System.Drawing.Size(75, 23);
             this.btGuradar.TabIndex = 3;
-            this.btGuradar.Text = "Guradar";
+            this.btGuradar.Text = "Añadir";
             this.btGuradar.UseVisualStyleBackColor = true;
             this.btGuradar.Click += new System.EventHandler(this.btGuradar_Click);
             // 

@@ -41,26 +41,31 @@ namespace PlayBetWin_Administrador.Formularios
 
         private void btBorrar_Click(object sender, EventArgs e)
         {
-            BaseDatos b = new BaseDatos();
+            DialogResult result = MessageBox.Show("Seguro que desea eliminar el deporte?", "Eliminar", MessageBoxButtons.YesNo);
 
-            int r = b.Conectar();
+            if (result == DialogResult.Yes)
+            {
+                BaseDatos b = new BaseDatos();
 
-            if (r == -1)
-            {
-                MessageBox.Show("No se ha podido establecer conexión con la BD");
-            }
-            else
-            {
-                if (!b.existe("Select * from deportes where nombre = '" + deporte.nombre + "'"))
+                int r = b.Conectar();
+
+                if (r == -1)
                 {
-                   
-                    b.modificarTablas("DELETE FROM deportes WHERE id="+deporte.id);
-                    principal.rellenarTablaDeportes();
-                    this.Close();
+                    MessageBox.Show("No se ha podido establecer conexión con la BD");
                 }
                 else
                 {
-                    MessageBox.Show("Ya no existe");
+                    if (!b.existe("Select * from deportes where nombre = '" + deporte.nombre + "'"))
+                    {
+
+                        b.modificarTablas("DELETE FROM deportes WHERE id=" + deporte.id);
+                        principal.rellenarTablaDeportes();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya no existe");
+                    }
                 }
             }
         }
@@ -72,35 +77,43 @@ namespace PlayBetWin_Administrador.Formularios
 
         private void btGuardar_Click(object sender, EventArgs e)
         {
-            BaseDatos b = new BaseDatos();
+            DialogResult result = MessageBox.Show("Seguro que desea modificar el deporte?", "Modificar", MessageBoxButtons.YesNo);
 
-            int r = b.Conectar();
+            if (result == DialogResult.Yes)
+            {
+                BaseDatos b = new BaseDatos();
 
-            if (r == -1)
-            {
-                MessageBox.Show("No se ha podido establecer conexión con la BD");
-            }
-            else
-            {
-                if (b.existe("Select * from deportes where nombre = '" + textNombre.Text + "'") || deporte.nombre == textNombre.Text)
+                int r = b.Conectar();
+
+                if (r == -1)
                 {
-                    Regex exp = new Regex(@"^[a-zA-ZñÑ\s-]{2,50}$");
-                    if (exp.IsMatch(textNombre.Text))
-                    {
-                        b.modificarTablas("UPDATE deportes SET nombre = '" + textNombre.Text + "' , activado = " + checActivado.Checked +" WHERE id = "+ deporte.id);
-                    }
-                    else
-                    {
-                        MessageBox.Show("El nombre no es correcto");
-                    }
-                    b.Desconectar();
-                    principal.rellenarTablaDeportes();
+                    MessageBox.Show("No se ha podido establecer conexión con la BD");
                 }
                 else
                 {
-                    MessageBox.Show("El deporte ya existe");
+                    if (b.existe("Select * from deportes where nombre = '" + textNombre.Text + "'") || deporte.nombre == textNombre.Text)
+                    {
+                        Regex exp = new Regex(@"^[a-zA-ZñÑ\s-]{2,50}$");
+                        if (exp.IsMatch(textNombre.Text))
+                        {
+                            b.modificarTablas("UPDATE deportes SET nombre = '" + textNombre.Text + "' , activado = " + checActivado.Checked + " WHERE id = " + deporte.id);
+                        }
+                        else
+                        {
+                            MessageBox.Show("El nombre no es correcto");
+                        }
+                        b.Desconectar();
+                        principal.rellenarTablaDeportes();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El deporte ya existe");
+                    }
                 }
             }
+            
+            
+            
         }
     }
 }

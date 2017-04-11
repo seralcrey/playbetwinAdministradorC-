@@ -56,6 +56,12 @@
     <Compile Include="Formularios\frmAbrirDeporte.Designer.cs">
       <DependentUpon>frmAbrirDeporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAnadirCompeticion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirCompeticion.Designer.cs">
+      <DependentUpon>frmAnadirCompeticion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmAnadirDeporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +80,15 @@
     <Compile Include="Formularios\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Competicion.cs" />
     <Compile Include="Modelos\Deporte.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmAbrirDeporte.resx">
       <DependentUpon>frmAbrirDeporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAnadirCompeticion.resx">
+      <DependentUpon>frmAnadirCompeticion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAnadirDeporte.resx">
       <DependentUpon>frmAnadirDeporte.cs</DependentUpon>
