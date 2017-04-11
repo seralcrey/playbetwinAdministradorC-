@@ -65,22 +65,24 @@
             // 
             // btGuradar
             // 
+            this.btGuradar.BackColor = System.Drawing.Color.White;
             this.btGuradar.Location = new System.Drawing.Point(197, 226);
             this.btGuradar.Name = "btGuradar";
             this.btGuradar.Size = new System.Drawing.Size(75, 23);
             this.btGuradar.TabIndex = 3;
             this.btGuradar.Text = "Añadir";
-            this.btGuradar.UseVisualStyleBackColor = true;
+            this.btGuradar.UseVisualStyleBackColor = false;
             this.btGuradar.Click += new System.EventHandler(this.btGuradar_Click);
             // 
             // btCancelar
             // 
+            this.btCancelar.BackColor = System.Drawing.Color.White;
             this.btCancelar.Location = new System.Drawing.Point(116, 226);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 4;
             this.btCancelar.Text = "Cancelar";
-            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.UseVisualStyleBackColor = false;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // frmAnadirDeporte
@@ -88,6 +90,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(164)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(284, 266);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btGuradar);

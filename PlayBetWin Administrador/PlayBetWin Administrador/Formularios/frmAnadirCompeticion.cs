@@ -18,6 +18,7 @@ namespace PlayBetWin_Administrador.Formularios
         {
             InitializeComponent();
             rellanarComboxDeportes();
+            CenterToScreen();
         }
 
         public void rellanarComboxDeportes()
@@ -44,6 +45,11 @@ namespace PlayBetWin_Administrador.Formularios
             }
 
             b.Desconectar();
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

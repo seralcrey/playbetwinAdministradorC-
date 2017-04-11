@@ -79,7 +79,9 @@ namespace PlayBetWin_Administrador
         //Abre una ventana donde se podra añadir un deporte
         private void btAnadirDeporte_Click(object sender, EventArgs e)
         {
-            new frmAnadirDeporte(this).Show();
+
+            frmAnadirDeporte frm = new frmAnadirDeporte(this);
+            frm.ShowDialog(this);
         }
 
         private void btAbrirDeporte_Click(object sender, EventArgs e)
@@ -90,7 +92,9 @@ namespace PlayBetWin_Administrador
 
             Deporte depor = new Deporte(id, nombre,activado);
 
-            new frmAbrirDeporte(this, depor).Show();
+            frmAbrirDeporte frm = new frmAbrirDeporte(this, depor);
+            frm.ShowDialog(this);
+
 
         }
 

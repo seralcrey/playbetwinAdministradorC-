@@ -71,26 +71,30 @@
             // 
             // btCancelar
             // 
+            this.btCancelar.BackColor = System.Drawing.Color.White;
             this.btCancelar.Location = new System.Drawing.Point(116, 226);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 4;
             this.btCancelar.Text = "Cancelar";
-            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.UseVisualStyleBackColor = false;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(197, 226);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "Añadir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // frmAnadirCompeticion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(164)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btCancelar);
@@ -98,7 +102,10 @@
             this.Controls.Add(this.comboDeportes);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textNombre);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAnadirCompeticion";
+            this.ShowIcon = false;
             this.Text = "Añadir competición";
             this.ResumeLayout(false);
             this.PerformLayout();

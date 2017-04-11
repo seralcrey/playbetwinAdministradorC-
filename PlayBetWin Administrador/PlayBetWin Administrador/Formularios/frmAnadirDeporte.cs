@@ -19,6 +19,7 @@ namespace PlayBetWin_Administrador.Formularios
         {
             this.padre = padre;
             InitializeComponent();
+            CenterToScreen();
         }
 
         //Cierra la ventana

@@ -56,43 +56,47 @@
             // 
             // btEditar
             // 
+            this.btEditar.BackColor = System.Drawing.Color.White;
             this.btEditar.Location = new System.Drawing.Point(15, 226);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(95, 23);
             this.btEditar.TabIndex = 2;
             this.btEditar.Text = "Habilitar editar";
-            this.btEditar.UseVisualStyleBackColor = true;
+            this.btEditar.UseVisualStyleBackColor = false;
             this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // btBorrar
             // 
+            this.btBorrar.BackColor = System.Drawing.Color.White;
             this.btBorrar.Location = new System.Drawing.Point(116, 226);
             this.btBorrar.Name = "btBorrar";
             this.btBorrar.Size = new System.Drawing.Size(75, 23);
             this.btBorrar.TabIndex = 3;
             this.btBorrar.Text = "Borrar";
-            this.btBorrar.UseVisualStyleBackColor = true;
+            this.btBorrar.UseVisualStyleBackColor = false;
             this.btBorrar.Click += new System.EventHandler(this.btBorrar_Click);
             // 
             // btSalir
             // 
+            this.btSalir.BackColor = System.Drawing.Color.White;
             this.btSalir.Location = new System.Drawing.Point(197, 226);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(75, 23);
             this.btSalir.TabIndex = 4;
             this.btSalir.Text = "Salir";
-            this.btSalir.UseVisualStyleBackColor = true;
+            this.btSalir.UseVisualStyleBackColor = false;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
             // btGuardar
             // 
+            this.btGuardar.BackColor = System.Drawing.Color.White;
             this.btGuardar.Enabled = false;
             this.btGuardar.Location = new System.Drawing.Point(197, 103);
             this.btGuardar.Name = "btGuardar";
             this.btGuardar.Size = new System.Drawing.Size(75, 23);
             this.btGuardar.TabIndex = 5;
             this.btGuardar.Text = "Guardar";
-            this.btGuardar.UseVisualStyleBackColor = true;
+            this.btGuardar.UseVisualStyleBackColor = false;
             this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
             // checActivado
@@ -113,6 +117,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(164)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.checActivado);
             this.Controls.Add(this.btGuardar);
@@ -121,7 +127,10 @@
             this.Controls.Add(this.btEditar);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAbrirDeporte";
+            this.ShowIcon = false;
             this.Text = "Editar deporte";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -24,6 +24,7 @@ namespace PlayBetWin_Administrador.Formularios
             this.deporte = d;
             InitializeComponent();
             cargar();
+            CenterToScreen();
         }
 
         public void cargar()
