@@ -33,7 +33,7 @@
             this.comboDeportes = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btCancelar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btAnadir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textNombre
@@ -80,15 +80,16 @@
             this.btCancelar.UseVisualStyleBackColor = false;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
-            // button2
+            // btAnadir
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(197, 226);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Añadir";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btAnadir.BackColor = System.Drawing.Color.White;
+            this.btAnadir.Location = new System.Drawing.Point(197, 226);
+            this.btAnadir.Name = "btAnadir";
+            this.btAnadir.Size = new System.Drawing.Size(75, 23);
+            this.btAnadir.TabIndex = 5;
+            this.btAnadir.Text = "Añadir";
+            this.btAnadir.UseVisualStyleBackColor = false;
+            this.btAnadir.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmAnadirCompeticion
             // 
@@ -96,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(164)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btAnadir);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboDeportes);
@@ -119,6 +120,6 @@
         private System.Windows.Forms.ComboBox comboDeportes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btCancelar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btAnadir;
     }
 }

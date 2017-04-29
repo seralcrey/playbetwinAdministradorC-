@@ -49,7 +49,40 @@ namespace PlayBetWin_Administrador.Formularios
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BaseDatos b = new BaseDatos();
+
+            int r = b.Conectar();
+
+            if (r == -1)
+            {
+                MessageBox.Show("No se ha podido establecer conexión con la BD");
+            }
+            else
+            {
+                if (b.existe("Select * from competicion where nombre = '" + textNombre.Text + "'"))
+                {
+                    Regex exp = new Regex(@"^[a-zA-ZñÑ\s-]{2,50}$");
+                    if (exp.IsMatch(textNombre.Text))
+                    {
+                        b.modificarTablas("INSERT deportes (nombre, Activado) VALUES ('" + textNombre.Text + "', " + checkActivado.Checked + " )");
+                    }
+                    else
+                    {
+                        MessageBox.Show("no Vale");
+                    }
+                    b.Desconectar();
+                    padre.rellenarTablaDeportes();
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe");
+                }
+            }
         }
     }
 }
