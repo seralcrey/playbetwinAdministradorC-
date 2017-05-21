@@ -44,7 +44,7 @@ namespace PlayBetWin_Administrador.Formularios
             {
                 if (b.existe("Select * from deportes where nombre = '" + textNombre.Text +"'"))
                 {
-                    Regex exp = new Regex(@"^[a-zA-ZñÑ\s-]{2,50}$");
+                    Regex exp = new Regex(@"^[a-zA-Z0-9ñÑ\s-]{2,50}$");
                     if (exp.IsMatch(textNombre.Text))
                     {
                         b.modificarTablas("INSERT deportes (nombre, Activado) VALUES ('" + textNombre.Text + "', " + checkActivado.Checked + " )");

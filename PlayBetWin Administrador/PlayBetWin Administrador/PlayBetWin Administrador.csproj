@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexiones\BaseDatos.cs" />
+    <Compile Include="Formularios\frmAbrirCompeticion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAbrirCompeticion.Designer.cs">
+      <DependentUpon>frmAbrirCompeticion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmAbrirDeporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="Modelos\Deporte.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmAbrirCompeticion.resx">
+      <DependentUpon>frmAbrirCompeticion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAbrirDeporte.resx">
       <DependentUpon>frmAbrirDeporte.cs</DependentUpon>
     </EmbeddedResource>

@@ -68,6 +68,7 @@ namespace PlayBetWin_Administrador.Formularios
                         MessageBox.Show("Ya no existe");
                     }
                 }
+                b.Desconectar();
             }
         }
 
@@ -94,7 +95,7 @@ namespace PlayBetWin_Administrador.Formularios
                 {
                     if (b.existe("Select * from deportes where nombre = '" + textNombre.Text + "'") || deporte.nombre == textNombre.Text)
                     {
-                        Regex exp = new Regex(@"^[a-zA-ZñÑ\s-]{2,50}$");
+                        Regex exp = new Regex(@"^[a-zA-Z0-9ñÑ\s-]{2,50}$");
                         if (exp.IsMatch(textNombre.Text))
                         {
                             b.modificarTablas("UPDATE deportes SET nombre = '" + textNombre.Text + "' , activado = " + checActivado.Checked + " WHERE id = " + deporte.id);
@@ -110,6 +111,7 @@ namespace PlayBetWin_Administrador.Formularios
                     {
                         MessageBox.Show("El deporte ya existe");
                     }
+                    b.Desconectar();
                 }
             }
             

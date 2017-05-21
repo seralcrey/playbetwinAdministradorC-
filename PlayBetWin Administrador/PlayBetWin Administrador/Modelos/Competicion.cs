@@ -13,7 +13,7 @@ namespace PlayBetWin_Administrador.Modelos
         public int id_deporte { get; set; }
         public bool activado { get; set; }
 
-        Competicion (int id, string nombre, int id_deporte, bool activado)
+        public Competicion (int id, string nombre, int id_deporte, bool activado)
         {
             this.id = id;
             this.nombre = nombre;

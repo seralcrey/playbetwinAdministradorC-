@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,8 +15,12 @@ namespace PlayBetWin_Administrador.Formularios
 {
     public partial class frmAnadirCompeticion : Form
     {
-        public frmAnadirCompeticion()
+        public frmPrincipal padre;
+        
+            
+        public frmAnadirCompeticion(frmPrincipal padre)
         {
+            this.padre = padre;
             InitializeComponent();
             rellanarComboxDeportes();
             CenterToScreen();
@@ -34,7 +39,7 @@ namespace PlayBetWin_Administrador.Formularios
             else
             {
                 List<List<String>> deportes = b.cogerLista("SELECT id, nombre, activado FROM deportes ");
-
+                
                 for (int i = 0; i < deportes.Count; i++)
                 {
                     int id = int.Parse(deportes[i][0]);
@@ -42,6 +47,9 @@ namespace PlayBetWin_Administrador.Formularios
                     bool activado = bool.Parse(deportes[i][2]);
                     comboDeportes.Items.Add(new Deporte(id, nombre, activado));
                 }
+
+                comboDeportes.SelectedIndex = 0;
+                
             }
 
             b.Desconectar();
@@ -54,6 +62,7 @@ namespace PlayBetWin_Administrador.Formularios
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             BaseDatos b = new BaseDatos();
 
             int r = b.Conectar();
@@ -64,19 +73,24 @@ namespace PlayBetWin_Administrador.Formularios
             }
             else
             {
-                if (b.existe("Select * from competicion where nombre = '" + textNombre.Text + "'"))
+                
+                
+                if (b.existe("Select * from competiciones where nombre = '" + textNombre.Text + "'") )
                 {
-                    Regex exp = new Regex(@"^[a-zA-ZñÑ\s-]{2,50}$");
+                    Regex exp = new Regex(@"^[a-zA-Z0-9ñÑ\s-]{2,50}$");
                     if (exp.IsMatch(textNombre.Text))
                     {
-                        b.modificarTablas("INSERT deportes (nombre, Activado) VALUES ('" + textNombre.Text + "', " + checkActivado.Checked + " )");
+                        Deporte deportSelect = (Deporte)comboDeportes.SelectedItem;
+                        b.modificarTablas("INSERT competiciones (nombre, Activado, id_deporte) VALUES ('" + textNombre.Text + "', true,  " + deportSelect.id + " )");
+                        padre.rellenarTablaCompeticiones();
+                        this.Close();
                     }
                     else
                     {
                         MessageBox.Show("no Vale");
                     }
                     b.Desconectar();
-                    padre.rellenarTablaDeportes();
+                    //padre.rellenarTablaDeportes();
                 }
                 else
                 {

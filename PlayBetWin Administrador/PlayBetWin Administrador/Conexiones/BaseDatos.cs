@@ -14,7 +14,7 @@ namespace PlayBetWin_Administrador.Conexiones
 
         public BaseDatos()
         {
-            cnx = new MySqlConnection("SERVER=localhost;DATABASE=prueba;UID=root;PWD=''");
+            cnx = new MySqlConnection("SERVER=localhost;DATABASE=playbetwin;UID=root;PWD=''");
         }
         public int Conectar()
         {
