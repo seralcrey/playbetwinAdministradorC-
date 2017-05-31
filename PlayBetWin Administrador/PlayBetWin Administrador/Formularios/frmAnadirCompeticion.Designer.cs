@@ -42,6 +42,7 @@
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(260, 20);
             this.textNombre.TabIndex = 0;
+            this.textNombre.TextChanged += new System.EventHandler(this.textNombre_TextChanged);
             // 
             // label1
             // 
@@ -51,6 +52,7 @@
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboDeportes
             // 
@@ -59,6 +61,7 @@
             this.comboDeportes.Name = "comboDeportes";
             this.comboDeportes.Size = new System.Drawing.Size(260, 21);
             this.comboDeportes.TabIndex = 2;
+            this.comboDeportes.SelectedIndexChanged += new System.EventHandler(this.comboDeportes_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -68,6 +71,7 @@
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Deporte";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btCancelar
             // 

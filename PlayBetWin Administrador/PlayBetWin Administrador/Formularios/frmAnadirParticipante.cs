@@ -13,12 +13,11 @@ using System.Windows.Forms;
 
 namespace PlayBetWin_Administrador.Formularios
 {
-    public partial class frmAnadirCompeticion : Form
+    public partial class frmAnadirParticipante : Form
     {
         public frmPrincipal padre;
-        
-            
-        public frmAnadirCompeticion(frmPrincipal padre)
+
+        public frmAnadirParticipante(frmPrincipal padre)
         {
             this.padre = padre;
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace PlayBetWin_Administrador.Formularios
             else
             {
                 List<List<String>> deportes = b.cogerLista("SELECT id, nombre, activado FROM deportes ");
-                
+
                 for (int i = 0; i < deportes.Count; i++)
                 {
                     int id = int.Parse(deportes[i][0]);
@@ -49,7 +48,7 @@ namespace PlayBetWin_Administrador.Formularios
                 }
 
                 comboDeportes.SelectedIndex = 0;
-                
+
             }
 
             b.Desconectar();
@@ -60,9 +59,8 @@ namespace PlayBetWin_Administrador.Formularios
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btAnadir_Click(object sender, EventArgs e)
         {
-
             BaseDatos b = new BaseDatos();
 
             int r = b.Conectar();
@@ -73,16 +71,16 @@ namespace PlayBetWin_Administrador.Formularios
             }
             else
             {
-                
-                
-                if (b.existe("Select * from competiciones where nombre = '" + textNombre.Text + "'") )
+
+
+                if (b.existe("Select * from participantes where nombre = '" + textNombre.Text + "'"))
                 {
                     Regex exp = new Regex(@"^[a-zA-Z0-9ñÑ\s-]{2,50}$");
                     if (exp.IsMatch(textNombre.Text))
                     {
                         Deporte deportSelect = (Deporte)comboDeportes.SelectedItem;
-                        b.modificarTablas("INSERT competiciones (nombre, Activado, id_deporte) VALUES ('" + textNombre.Text + "', true,  " + deportSelect.id + " )");
-                        padre.rellenarTablaCompeticiones();
+                        b.modificarTablas("INSERT participantes (nombre, Activado, id_deporte) VALUES ('" + textNombre.Text + "', true,  " + deportSelect.id + " )");
+                        padre.rellenarTablaParticipantes();
                         this.Close();
                     }
                     else
@@ -90,33 +88,13 @@ namespace PlayBetWin_Administrador.Formularios
                         MessageBox.Show("no Vale");
                     }
                     b.Desconectar();
-                    //padre.rellenarTablaDeportes();
+                    
                 }
                 else
                 {
                     MessageBox.Show("Ya existe");
                 }
             }
-        }
-
-        private void comboDeportes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

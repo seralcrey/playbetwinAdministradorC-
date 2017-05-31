@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace PlayBetWin_Administrador.Conexiones
 {
@@ -58,6 +59,7 @@ namespace PlayBetWin_Administrador.Conexiones
                         List<String> lista2 = new List<String>();
                         for (int i = 0; i < d.FieldCount; i++)
                             lista2.Add(d.GetString(i));
+                           
                         lista.Add(lista2);
                     }
                 
@@ -84,7 +86,7 @@ namespace PlayBetWin_Administrador.Conexiones
             }
             catch (MySqlException ex)
             {
-
+                MessageBox.Show("error al modificar" + ex.ToString());
             }
         }
 

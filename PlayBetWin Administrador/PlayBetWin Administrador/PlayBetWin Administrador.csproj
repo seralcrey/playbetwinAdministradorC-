@@ -62,6 +62,18 @@
     <Compile Include="Formularios\frmAbrirDeporte.Designer.cs">
       <DependentUpon>frmAbrirDeporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAbrirEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAbrirEvento.Designer.cs">
+      <DependentUpon>frmAbrirEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAbrirParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAbrirParticipante.Designer.cs">
+      <DependentUpon>frmAbrirParticipante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmAnadirCompeticion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +85,18 @@
     </Compile>
     <Compile Include="Formularios\frmAnadirDeporte.Designer.cs">
       <DependentUpon>frmAnadirDeporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirEvento.Designer.cs">
+      <DependentUpon>frmAnadirEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirParticipante.Designer.cs">
+      <DependentUpon>frmAnadirParticipante.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
@@ -86,6 +110,14 @@
     <Compile Include="Formularios\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRealizarPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRealizarPagos.Designer.cs">
+      <DependentUpon>frmRealizarPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Evento.cs" />
+    <Compile Include="Modelos\Participante.cs" />
     <Compile Include="Modelos\Competicion.cs" />
     <Compile Include="Modelos\Deporte.cs" />
     <Compile Include="Program.cs" />
@@ -96,17 +128,32 @@
     <EmbeddedResource Include="Formularios\frmAbrirDeporte.resx">
       <DependentUpon>frmAbrirDeporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAbrirEvento.resx">
+      <DependentUpon>frmAbrirEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAbrirParticipante.resx">
+      <DependentUpon>frmAbrirParticipante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAnadirCompeticion.resx">
       <DependentUpon>frmAnadirCompeticion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAnadirDeporte.resx">
       <DependentUpon>frmAnadirDeporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAnadirEvento.resx">
+      <DependentUpon>frmAnadirEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAnadirParticipante.resx">
+      <DependentUpon>frmAnadirParticipante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRealizarPagos.resx">
+      <DependentUpon>frmRealizarPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
