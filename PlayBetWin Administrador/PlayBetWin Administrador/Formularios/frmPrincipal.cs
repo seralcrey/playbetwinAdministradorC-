@@ -23,9 +23,13 @@ namespace PlayBetWin_Administrador
             rellenarTablaDeportes();
             rellenarTablaCompeticiones();
             rellenarTablaParticipantes();
+            rellenarCampoBusquedaEvento();
             rellenarTablaEventos();
+            rellenarTablaApuestas();
             botonesCompe();
             botonesPart();
+            botonesEven();
+            botonesApue();
 
 
         }
@@ -39,7 +43,6 @@ namespace PlayBetWin_Administrador
         private int pagCompe = 20;
         public void botonesCompe()
         {
-            // Competición
             if (pagCompe == 20)
             {
                 btMenosCompe.Enabled = false;
@@ -53,7 +56,7 @@ namespace PlayBetWin_Administrador
 
         public void botonesPart()
         {
-            // participante
+            
             if (pagPar == 20)
             {
                 btmenosPart.Enabled = false;
@@ -61,6 +64,36 @@ namespace PlayBetWin_Administrador
             else
             {
                 btmenosPart.Enabled = true;
+            }
+        }
+
+        private int pagEven = 20;
+
+        public void botonesEven()
+        {
+            
+            if (pagEven == 20)
+            {
+                btMenosEvento.Enabled = false;
+            }
+            else
+            {
+                btMenosEvento.Enabled = true;
+            }
+        }
+
+
+        private int pagApuesta = 20;
+        public void botonesApue()
+        {
+            
+            if (pagApuesta == 20)
+            {
+                btMenosApuesta.Enabled = false;
+            }
+            else
+            {
+                btMenosApuesta.Enabled = true;
             }
         }
         /*********************************
@@ -202,7 +235,7 @@ namespace PlayBetWin_Administrador
                     where += " and id=" + textID.Text + " ";
 
 
-                List<List<String>> deportes = b.cogerLista("SELECT id, nombre, deporte, activado FROM v_competiciones" + where + " LIMIT " + (pagCompe-20) + " , " + pagCompe );
+                List<List<String>> deportes = b.cogerLista("SELECT id, nombre, deporte, activado FROM v_competiciones" + where + " LIMIT " + (pagCompe-20) + " , " + 20 );
 
 
 
@@ -219,8 +252,8 @@ namespace PlayBetWin_Administrador
                     DataRow row = dt.NewRow();
                     row["ID"] = deportes[i][0];
                     row["Nombre"] = deportes[i][1];
-                    row["Activado"] = deportes[i][2];
-                    row["Deporte"] = deportes[i][3];
+                    row["Activado"] = deportes[i][3];
+                    row["Deporte"] = deportes[i][2];
                     dt.Rows.Add(row);
                 }
             }
@@ -397,7 +430,7 @@ namespace PlayBetWin_Administrador
                     where += " and id=" + textIDPar.Text + " ";
 
 
-                List<List<String>> deportes = b.cogerLista("SELECT id, participante , deporte, activado FROM v_participantes " + where + " LIMIT " + (pagPar - 20) + " , " + pagPar);
+                List<List<String>> deportes = b.cogerLista("SELECT id, participante , deporte, activado FROM v_participantes " + where + " LIMIT " + (pagPar - 20) + " , " + 20);
 
 
 
@@ -559,6 +592,10 @@ namespace PlayBetWin_Administrador
         ********************************/
         public void rellenarTablaEventos()
         {
+
+            fechaEvent.CustomFormat = "dd/MM/yyyy HH:mm ";
+            fechaEvent.ShowUpDown = true;
+
             BaseDatos b = new BaseDatos();
             int r = b.Conectar();
 
@@ -573,7 +610,7 @@ namespace PlayBetWin_Administrador
                 List<String> check = new List<string>();
                 String where = " ";
 
-                if (desactPart.Checked)
+                if (checkActEven.Checked)
                 {
                     where = " where true ";
                 }
@@ -582,19 +619,19 @@ namespace PlayBetWin_Administrador
                     where = " where activado=true ";
                 }
 
-                if (!todosPart.Checked)
+                if (!checkTodosEven.Checked)
                 {
 
 
-                    if (btFuPar.Checked)
+                    if (checkFutEve.Checked)
                         check.Add(" deporte='Fútbol' ");
-                    if (btBaPar.Checked)
+                    if (checkBolEven.Checked)
                         check.Add(" deporte='Baloncesto' ");
-                    if (btTePar.Checked)
+                    if (checkTeniEve.Checked)
                         check.Add(" deporte='Tenis' ");
-                    if (btESPar.Checked)
+                    if (checkESEven.Checked)
                         check.Add(" deporte='E-sport' ");
-                    if (btMasPar.Checked)
+                    if (checkMasEven.Checked)
                         check.Add(" deporte='Mas deportes' ");
 
                     where += " and (";
@@ -612,14 +649,55 @@ namespace PlayBetWin_Administrador
 
                 }
 
-                //if (textNompar.Text != "")
-                //    where += " and participante LIKE '%" + textNompar.Text + "%' ";
+                Participante c = (Participante)comboEquipoLocalEve.SelectedItem;
+                Participante v = (Participante)comboEquipoVisEve.SelectedItem;
+                Competicion com = (Competicion)comboCompeEvent.SelectedItem;
+
+                if (v.id != 0)
+                    where += " and id_participante_visitante = "+v.id;
+
+                if (c.id != 0)
+                    where += " and id_participante_casa = " + c.id;
+
+                if (com.id != 0)
+                    where += " and id_competicion = " + com.id;
+
+                if (cuota1Evento.Text.ToString().Length > 0)
+                    where += " and apuesta_1 = '" + cuota1Evento.Text+"'";
+
+                if (cuota2Evento.Text.ToString().Length > 0)
+                    where += " and apuesta_2 = '" + cuota2Evento.Text + "'";
+
+                if (cuotaXEvento.Text.ToString().Length > 0)
+                    where += " and apuesta_X = '" + cuotaXEvento.Text + "'";
 
                 //if (textIDPar.Text != "")
                 //    where += " and id=" + textIDPar.Text + " ";
 
+                if (resCEve.Text.ToString().Trim() != "")
+                {
+                    where += " and resultado_casa= " + resCEve.Text + " ";
+                }
 
-                List<List<String>> deportes = b.cogerLista("SELECT id, participante_casa, participante_visitante, ifNull(resultado_casa,'') as resultado_casa , ifNull(resultado_visitante, '') as resultado_visitante , fecha_hora, apuesta_1, apuesta_2, ifNull(apuesta_x, '') as apuesta_x , deporte ,pagado , competicion  FROM v_eventos_participantes ");// + where + " LIMIT " + (pagPar - 20) + " , " + pagPar);
+                if (resVEvento.Text.ToString().Trim() != "")
+                {
+                    where += " and resultado_visitante = " + resVEvento.Text.ToString().Trim() + " ";
+                }
+
+                if (checkPagado.Checked)
+                {
+                    where += " and pagado=true ";
+                }
+
+                DateTime date = Convert.ToDateTime(fechaEvent.Value);
+
+                String fechaHora = date.Year + "-" + date.Month + "-" + date.Day + " " + date.Hour + ":" + date.Minute + ":" + date.Second;
+
+                where += " and fecha_hora > '" + fechaHora + "' ";
+
+                List<List<String>> deportes = b.cogerLista("SELECT id, participante_casa, participante_visitante, ifNull(resultado_casa,'') as resultado_casa , ifNull(resultado_visitante, '') as resultado_visitante , fecha_hora, apuesta_1, apuesta_2, ifNull(apuesta_x, '') as apuesta_x , deporte ,pagado , competicion  FROM v_eventos_participantes " + where + " LIMIT " + (pagEven - 20) + " , " + 20);// + where + " LIMIT " + (pagPar - 20) + " , " + pagPar);
+
+
 
 
 
@@ -660,6 +738,97 @@ namespace PlayBetWin_Administrador
             b.Desconectar();
 
         }
+
+        private void rellenarCampoBusquedaEvento()
+        {
+            rellanarComboxParticipante();
+            rellanarComboxCompe();
+        }
+
+        public void rellanarComboxParticipante()
+        {
+            BaseDatos b = new BaseDatos();
+
+            int r = b.Conectar();
+
+            if (r == -1)
+            {
+                MessageBox.Show("No se ha podido establecer conexión con la BD");
+            }
+            else
+            {
+                List<List<String>> deportes = b.cogerLista("SELECT id, nombre, id_deporte, activado FROM participantes; ");
+
+                comboEquipoLocalEve.Items.Add(new Participante(0, "(Todos)", 0, true));
+                comboEquipoVisEve.Items.Add(new Participante(0, "(Todos)", 0, true));
+                comboLPApuesta.Items.Add(new Participante(0, "(Todos)", 0, true));
+                comboVPApuesta.Items.Add(new Participante(0, "(Todos)", 0, true));
+
+                for (int i = 0; i < deportes.Count; i++)
+                {
+                    int id = int.Parse(deportes[i][0]);
+                    string nombre = deportes[i][1];
+                    int id_deporte = int.Parse(deportes[i][2]);
+                    bool activado = bool.Parse(deportes[i][3]);
+                    comboEquipoLocalEve.Items.Add(new Participante(id, nombre, id_deporte, activado));
+                    comboEquipoVisEve.Items.Add(new Participante(id, nombre, id_deporte, activado));
+                    comboLPApuesta.Items.Add(new Participante(id, nombre, id_deporte, activado));
+                    comboVPApuesta.Items.Add(new Participante(id, nombre, id_deporte, activado));
+                }
+
+                
+                comboEquipoLocalEve.Sorted = true;
+                comboEquipoLocalEve.SelectedIndex = 0;
+                comboEquipoVisEve.Sorted = true;
+                comboEquipoVisEve.SelectedIndex = 0;
+                comboLPApuesta.Sorted = true;
+                comboVPApuesta.Sorted = true;
+                
+
+               
+            }
+
+            b.Desconectar();
+        }
+
+
+        public void rellanarComboxCompe()
+        {
+            BaseDatos b = new BaseDatos();
+
+            int r = b.Conectar();
+
+            if (r == -1)
+            {
+                MessageBox.Show("No se ha podido establecer conexión con la BD");
+            }
+            else
+            {
+                List<List<String>> deportes = b.cogerLista("SELECT id, nombre, id_deporte, activado FROM competiciones where activado=true; ");
+
+                for (int i = 0; i < deportes.Count; i++)
+                {
+                    int id = int.Parse(deportes[i][0]);
+                    string nombre = deportes[i][1];
+                    int id_deporte = int.Parse(deportes[i][2]);
+                    bool activado = bool.Parse(deportes[i][3]);
+                    comboCompeEvent.Items.Add(new Competicion(id, nombre, id_deporte, activado));
+                    comboCompeApuesta.Items.Add(new Competicion(id, nombre, id_deporte, activado));
+
+                }
+                
+                comboCompeEvent.Items.Add(new Competicion(0, "(Todos)", 0, true));
+                comboCompeApuesta.Items.Add(new Competicion(0, "(Todos)", 0, true));
+
+                comboCompeEvent.Sorted = true;
+                comboCompeEvent.SelectedIndex = 0;
+                comboCompeApuesta.Sorted = true;
+                comboCompeApuesta.SelectedIndex = 0;
+            }
+
+            b.Desconectar();
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -791,6 +960,236 @@ namespace PlayBetWin_Administrador
             }
 
             b.Desconectar();
+        }
+
+        private void btBuscar_Click(object sender, EventArgs e)
+        {
+            rellenarTablaEventos();
+        }
+
+        private void btMenosEvento_Click(object sender, EventArgs e)
+        {
+            pagEven -= 20;
+            botonesEven();
+            rellenarTablaEventos();
+        }
+
+        private void btMasEvento_Click(object sender, EventArgs e)
+        {
+            pagEven += 20;
+            botonesEven();
+            rellenarTablaEventos();
+        }
+
+
+        /*********************************
+        *             Apuestas
+        ********************************/
+        public void rellenarTablaApuestas()
+        {
+
+            fechaApuesta.CustomFormat = "dd/MM/yyyy HH:mm ";
+            fechaApuesta.ShowUpDown = true;
+
+            BaseDatos b = new BaseDatos();
+            int r = b.Conectar();
+
+            if (r == -1)
+            {
+                MessageBox.Show("No se ha podido establecer conexión con la BD");
+            }
+            else
+            {
+
+                DataTable dt = new DataTable();
+                List<String> check = new List<string>();
+                String where = " ";
+
+                
+                where = " where true ";
+                
+
+                if (!checkTodApuesta.Checked)
+                {
+
+
+                    if (checkFutApuesta.Checked)
+                        check.Add(" deporte='Fútbol' ");
+                    if (checkBalApuesta.Checked)
+                        check.Add(" deporte='Baloncesto' ");
+                    if (checkTenApuesta.Checked)
+                        check.Add(" deporte='Tenis' ");
+                    if (checkESApuesta.Checked)
+                        check.Add(" deporte='E-sport' ");
+                    if (checkMasApuesta.Checked)
+                        check.Add(" deporte='Mas deportes' ");
+
+                    where += " and (";
+                    for (int i = 0; i < check.Count; i++)
+                    {
+                        where += check[i];
+
+                        if (i < check.Count - 1)
+                        {
+                            where += " or ";
+                        }
+                    }
+                    where += " ) ";
+
+
+                }
+
+                Participante c = (Participante)comboLPApuesta.SelectedItem;
+                Participante v = (Participante)comboVPApuesta.SelectedItem;
+                Competicion com = (Competicion)comboCompeApuesta.SelectedItem;
+
+                try
+                {
+                    if (v.id != 0)
+                        where += " and id_participante_visitante = " + v.id;
+                }
+                catch (System.NullReferenceException e)
+                {
+
+                }
+
+                try
+                { 
+                    if (c.id != 0)
+                        where += " and id_participante_casa = " + c.id;
+                }
+                catch (System.NullReferenceException e)
+                {
+
+                }
+
+
+
+                if (com.id != 0)
+                    where += " and id_competicion = " + com.id;
+
+                if (textPronoApuesta.Text.ToString().Length > 0)
+                    where += " and pronostico = '" + textPronoApuesta.Text.ToString().Trim() + "'";
+
+                if (textNickApuesta.Text.ToString().Length > 0)
+                    where += " and nick LIKE '%" + textNickApuesta.Text.ToString().Trim() + "%' ";
+
+                if (textCoinsApuesta.Text.ToString().Length > 0)
+                    where += " and coins = '" + textCoinsApuesta.Text.ToString().Trim() + "'";
+
+                if (checkPagadoApuesta.Checked)
+                {
+                    where += " and pagado=true ";
+                }
+
+                if (checkNoPagadoApuesta.Checked)
+                {
+                    where += " and pagado=false ";
+                }
+
+                DateTime date = Convert.ToDateTime(fechaApuesta.Value);
+
+                String fechaHora = date.Year + "-" + date.Month + "-" + date.Day + " " + date.Hour + ":" + date.Minute + ":" + date.Second;
+
+                where += " and fecha_hora > '" + fechaHora + "' ";
+
+                List<List<String>> deportes = b.cogerLista("SELECT id, participante_casa, participante_visitante, fecha_hora, pronostico, nick, deporte ,pagado , competicion, coins  FROM v_apuestas " + where  + " LIMIT " + (pagApuesta - 20) + " , " + 20);
+
+
+                dt.Columns.Add("ID").ReadOnly = true;
+                dt.Columns.Add("Participante en casa").ReadOnly = true;
+                dt.Columns.Add("Participante en visitante").ReadOnly = true;
+                dt.Columns.Add("Competición").ReadOnly = true;
+                dt.Columns.Add("Nick").ReadOnly = true;
+                dt.Columns.Add("Pronostico").ReadOnly = true;
+                dt.Columns.Add("Coins").ReadOnly = true;
+                dt.Columns.Add("fecha y hora").ReadOnly = true;
+                dt.Columns.Add("Deporte").ReadOnly = true;
+                dt.Columns.Add("Pagado").ReadOnly = true;
+
+
+
+                tablaApuesta.DataSource = dt;
+                for (int i = 0; i < deportes.Count; i++)
+                {
+                    DataRow row = dt.NewRow();
+                    row["ID"] = deportes[i][0];
+                    row["Participante en casa"] = deportes[i][1];
+                    row["Participante en visitante"] = deportes[i][2];
+                    row["Competición"] = deportes[i][8];  
+                    row["fecha y hora"] = deportes[i][3];
+                    row["Nick"] = deportes[i][5];
+                    row["Pronostico"] = deportes[i][4];
+                    row["Coins"] = deportes[i][9];
+                    row["Deporte"] = deportes[i][6];
+                    row["Pagado"] = deportes[i][7];
+                    dt.Rows.Add(row);
+                }
+            }
+
+            b.Desconectar();
+
+        }
+
+        private void pestanaApuestas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btBuscarApuesta_Click(object sender, EventArgs e)
+        {
+            rellenarTablaApuestas();
+        }
+
+        private void btMenosApuesta_Click(object sender, EventArgs e)
+        {
+            pagApuesta -= 20;
+            botonesApue();
+            rellenarTablaApuestas();
+        }
+
+        private void btMasApuesta_Click(object sender, EventArgs e)
+        {
+            pagApuesta += 20;
+            botonesApue();
+            rellenarTablaApuestas();
+        }
+
+        private void btAnular_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estas seuro de anular esta apuesta?", "Anular", MessageBoxButtons.YesNoCancel);
+
+            if (result == DialogResult.Yes)
+            {
+                int id = Int32.Parse(tablaApuesta.CurrentRow.Cells[0].Value.ToString());
+                String nick = tablaApuesta.CurrentRow.Cells[4].Value.ToString();
+                string coins = tablaApuesta.CurrentRow.Cells[6].Value.ToString();
+
+                BaseDatos b = new BaseDatos();
+                int r = b.Conectar();
+
+                if (r == -1)
+                {
+                    MessageBox.Show("No se ha podido establecer conexión con la BD");
+                }
+                else
+                {
+                    b.modificarTablas("DELETE FROM apuestas WHERE id="+id+";");
+                    b.modificarTablas("UPDATE usuarios SET coins=coins+"+ coins+" WHERE nick='"+nick+"';");
+                    rellenarTablaApuestas();
+
+                    
+
+                }
+
+                b.Desconectar();
+            }
+            else if (result == DialogResult.No)
+            {
+            }
+            else if (result == DialogResult.Cancel)
+            {
+            }
         }
     }
 

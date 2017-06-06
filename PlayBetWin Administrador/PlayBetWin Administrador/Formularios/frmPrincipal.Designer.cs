@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.pestanas = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -87,38 +91,74 @@
             this.btAnadirParticipante = new System.Windows.Forms.Button();
             this.tablaParticipante = new System.Windows.Forms.DataGridView();
             this.tabEventos = new System.Windows.Forms.TabPage();
+            this.btMasEvento = new System.Windows.Forms.Button();
+            this.btMenosEvento = new System.Windows.Forms.Button();
+            this.btBuscar = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkPagado = new System.Windows.Forms.CheckBox();
+            this.checkActEven = new System.Windows.Forms.CheckBox();
+            this.checkFutEve = new System.Windows.Forms.CheckBox();
+            this.checkTodosEven = new System.Windows.Forms.CheckBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.checkMasEven = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.checkESEven = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cuota2Evento = new System.Windows.Forms.TextBox();
+            this.checkTeniEve = new System.Windows.Forms.CheckBox();
+            this.cuotaXEvento = new System.Windows.Forms.TextBox();
+            this.cuota1Evento = new System.Windows.Forms.TextBox();
+            this.checkBolEven = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.fechaEvent = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.resVEvento = new System.Windows.Forms.TextBox();
+            this.resCEve = new System.Windows.Forms.TextBox();
+            this.comboCompeEvent = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboEquipoVisEve = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboEquipoLocalEve = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btDarApostado = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tablaEventos = new System.Windows.Forms.DataGridView();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.pestanaApuestas = new System.Windows.Forms.TabPage();
+            this.btMenosApuesta = new System.Windows.Forms.Button();
+            this.btBuscarApuesta = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkNoPagadoApuesta = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textCoinsApuesta = new System.Windows.Forms.TextBox();
+            this.textNickApuesta = new System.Windows.Forms.TextBox();
+            this.textPronoApuesta = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.checkPagadoApuesta = new System.Windows.Forms.CheckBox();
+            this.checkFutApuesta = new System.Windows.Forms.CheckBox();
+            this.checkTodApuesta = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.checkMasApuesta = new System.Windows.Forms.CheckBox();
+            this.checkESApuesta = new System.Windows.Forms.CheckBox();
+            this.checkTenApuesta = new System.Windows.Forms.CheckBox();
+            this.checkBalApuesta = new System.Windows.Forms.CheckBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.fechaApuesta = new System.Windows.Forms.DateTimePicker();
+            this.comboCompeApuesta = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.comboVPApuesta = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.comboLPApuesta = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tablaApuesta = new System.Windows.Forms.DataGridView();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.toolStripSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.btMasApuesta = new System.Windows.Forms.Button();
+            this.btAnular = new System.Windows.Forms.Button();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -132,9 +172,12 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaParticipante)).BeginInit();
             this.tabEventos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEventos)).BeginInit();
-            this.menu.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEventos)).BeginInit();
+            this.pestanaApuestas.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaApuesta)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -162,6 +205,7 @@
             this.pestanas.Controls.Add(this.tabPage2);
             this.pestanas.Controls.Add(this.tabParticipantes);
             this.pestanas.Controls.Add(this.tabEventos);
+            this.pestanas.Controls.Add(this.pestanaApuestas);
             this.pestanas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pestanas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pestanas.Location = new System.Drawing.Point(0, 0);
@@ -209,23 +253,23 @@
             // 
             this.tablaDeportes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaDeportes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaDeportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaDeportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.tablaDeportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaDeportes.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaDeportes.DefaultCellStyle = dataGridViewCellStyle28;
             this.tablaDeportes.Dock = System.Windows.Forms.DockStyle.Left;
             this.tablaDeportes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.tablaDeportes.Location = new System.Drawing.Point(3, 3);
@@ -466,23 +510,23 @@
             // 
             this.tablaCompeticion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaCompeticion.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaCompeticion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaCompeticion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.tablaCompeticion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaCompeticion.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaCompeticion.DefaultCellStyle = dataGridViewCellStyle30;
             this.tablaCompeticion.Dock = System.Windows.Forms.DockStyle.Left;
             this.tablaCompeticion.Location = new System.Drawing.Point(3, 3);
             this.tablaCompeticion.Name = "tablaCompeticion";
@@ -722,35 +766,35 @@
             // 
             this.tablaParticipante.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaParticipante.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaParticipante.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaParticipante.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.tablaParticipante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaParticipante.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaParticipante.DefaultCellStyle = dataGridViewCellStyle32;
             this.tablaParticipante.Dock = System.Windows.Forms.DockStyle.Left;
             this.tablaParticipante.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.tablaParticipante.Location = new System.Drawing.Point(3, 3);
             this.tablaParticipante.Name = "tablaParticipante";
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaParticipante.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaParticipante.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.tablaParticipante.Size = new System.Drawing.Size(543, 644);
             this.tablaParticipante.TabIndex = 0;
             this.tablaParticipante.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tablaParticipante_CellMouseDoubleClick);
@@ -758,6 +802,9 @@
             // tabEventos
             // 
             this.tabEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(164)))), ((int)(((byte)(216)))));
+            this.tabEventos.Controls.Add(this.btMasEvento);
+            this.tabEventos.Controls.Add(this.btMenosEvento);
+            this.tabEventos.Controls.Add(this.btBuscar);
             this.tabEventos.Controls.Add(this.groupBox3);
             this.tabEventos.Controls.Add(this.btDarApostado);
             this.tabEventos.Controls.Add(this.button2);
@@ -771,6 +818,314 @@
             this.tabEventos.TabIndex = 3;
             this.tabEventos.Text = "Eventos";
             this.tabEventos.Click += new System.EventHandler(this.tabEventos_Click);
+            // 
+            // btMasEvento
+            // 
+            this.btMasEvento.BackColor = System.Drawing.Color.White;
+            this.btMasEvento.Location = new System.Drawing.Point(57, 621);
+            this.btMasEvento.Name = "btMasEvento";
+            this.btMasEvento.Size = new System.Drawing.Size(45, 23);
+            this.btMasEvento.TabIndex = 21;
+            this.btMasEvento.Text = ">";
+            this.btMasEvento.UseVisualStyleBackColor = false;
+            this.btMasEvento.Click += new System.EventHandler(this.btMasEvento_Click);
+            // 
+            // btMenosEvento
+            // 
+            this.btMenosEvento.BackColor = System.Drawing.Color.White;
+            this.btMenosEvento.Location = new System.Drawing.Point(6, 621);
+            this.btMenosEvento.Name = "btMenosEvento";
+            this.btMenosEvento.Size = new System.Drawing.Size(45, 23);
+            this.btMenosEvento.TabIndex = 20;
+            this.btMenosEvento.Text = "<";
+            this.btMenosEvento.UseVisualStyleBackColor = false;
+            this.btMenosEvento.Click += new System.EventHandler(this.btMenosEvento_Click);
+            // 
+            // btBuscar
+            // 
+            this.btBuscar.BackColor = System.Drawing.Color.White;
+            this.btBuscar.Location = new System.Drawing.Point(399, 621);
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btBuscar.TabIndex = 19;
+            this.btBuscar.Text = "Buscar";
+            this.btBuscar.UseVisualStyleBackColor = false;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.checkPagado);
+            this.groupBox3.Controls.Add(this.checkActEven);
+            this.groupBox3.Controls.Add(this.checkFutEve);
+            this.groupBox3.Controls.Add(this.checkTodosEven);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.checkMasEven);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.checkESEven);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.cuota2Evento);
+            this.groupBox3.Controls.Add(this.checkTeniEve);
+            this.groupBox3.Controls.Add(this.cuotaXEvento);
+            this.groupBox3.Controls.Add(this.cuota1Evento);
+            this.groupBox3.Controls.Add(this.checkBolEven);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.fechaEvent);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.resVEvento);
+            this.groupBox3.Controls.Add(this.resCEve);
+            this.groupBox3.Controls.Add(this.comboCompeEvent);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.comboEquipoVisEve);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.comboEquipoLocalEve);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Location = new System.Drawing.Point(480, 499);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(534, 145);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Filtros";
+            // 
+            // checkPagado
+            // 
+            this.checkPagado.AutoSize = true;
+            this.checkPagado.Location = new System.Drawing.Point(465, 118);
+            this.checkPagado.Name = "checkPagado";
+            this.checkPagado.Size = new System.Drawing.Size(63, 17);
+            this.checkPagado.TabIndex = 27;
+            this.checkPagado.Text = "Pagado";
+            this.checkPagado.UseVisualStyleBackColor = true;
+            // 
+            // checkActEven
+            // 
+            this.checkActEven.AutoSize = true;
+            this.checkActEven.Location = new System.Drawing.Point(346, 118);
+            this.checkActEven.Name = "checkActEven";
+            this.checkActEven.Size = new System.Drawing.Size(108, 17);
+            this.checkActEven.TabIndex = 26;
+            this.checkActEven.Text = "Ver desactivados";
+            this.checkActEven.UseVisualStyleBackColor = true;
+            // 
+            // checkFutEve
+            // 
+            this.checkFutEve.AutoSize = true;
+            this.checkFutEve.Location = new System.Drawing.Point(464, 35);
+            this.checkFutEve.Name = "checkFutEve";
+            this.checkFutEve.Size = new System.Drawing.Size(55, 17);
+            this.checkFutEve.TabIndex = 25;
+            this.checkFutEve.Text = "Fútbol";
+            this.checkFutEve.UseVisualStyleBackColor = true;
+            // 
+            // checkTodosEven
+            // 
+            this.checkTodosEven.AutoSize = true;
+            this.checkTodosEven.Checked = true;
+            this.checkTodosEven.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkTodosEven.Location = new System.Drawing.Point(464, 80);
+            this.checkTodosEven.Name = "checkTodosEven";
+            this.checkTodosEven.Size = new System.Drawing.Size(56, 17);
+            this.checkTodosEven.TabIndex = 24;
+            this.checkTodosEven.Text = "Todos";
+            this.checkTodosEven.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(416, 14);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(50, 13);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Deportes";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(300, 90);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "2";
+            // 
+            // checkMasEven
+            // 
+            this.checkMasEven.AutoSize = true;
+            this.checkMasEven.Location = new System.Drawing.Point(364, 80);
+            this.checkMasEven.Name = "checkMasEven";
+            this.checkMasEven.Size = new System.Drawing.Size(90, 17);
+            this.checkMasEven.TabIndex = 22;
+            this.checkMasEven.Text = "Mas deportes";
+            this.checkMasEven.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(236, 91);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(14, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "X";
+            // 
+            // checkESEven
+            // 
+            this.checkESEven.AutoSize = true;
+            this.checkESEven.Location = new System.Drawing.Point(364, 58);
+            this.checkESEven.Name = "checkESEven";
+            this.checkESEven.Size = new System.Drawing.Size(59, 17);
+            this.checkESEven.TabIndex = 21;
+            this.checkESEven.Text = "E-sport";
+            this.checkESEven.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(174, 91);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "1";
+            // 
+            // cuota2Evento
+            // 
+            this.cuota2Evento.Location = new System.Drawing.Point(283, 104);
+            this.cuota2Evento.Name = "cuota2Evento";
+            this.cuota2Evento.Size = new System.Drawing.Size(49, 20);
+            this.cuota2Evento.TabIndex = 14;
+            // 
+            // checkTeniEve
+            // 
+            this.checkTeniEve.AutoSize = true;
+            this.checkTeniEve.Location = new System.Drawing.Point(464, 58);
+            this.checkTeniEve.Name = "checkTeniEve";
+            this.checkTeniEve.Size = new System.Drawing.Size(52, 17);
+            this.checkTeniEve.TabIndex = 20;
+            this.checkTeniEve.Text = "Tenis";
+            this.checkTeniEve.UseVisualStyleBackColor = true;
+            // 
+            // cuotaXEvento
+            // 
+            this.cuotaXEvento.Location = new System.Drawing.Point(219, 104);
+            this.cuotaXEvento.Name = "cuotaXEvento";
+            this.cuotaXEvento.Size = new System.Drawing.Size(49, 20);
+            this.cuotaXEvento.TabIndex = 13;
+            // 
+            // cuota1Evento
+            // 
+            this.cuota1Evento.Location = new System.Drawing.Point(156, 104);
+            this.cuota1Evento.Name = "cuota1Evento";
+            this.cuota1Evento.Size = new System.Drawing.Size(49, 20);
+            this.cuota1Evento.TabIndex = 12;
+            // 
+            // checkBolEven
+            // 
+            this.checkBolEven.AutoSize = true;
+            this.checkBolEven.Location = new System.Drawing.Point(364, 35);
+            this.checkBolEven.Name = "checkBolEven";
+            this.checkBolEven.Size = new System.Drawing.Size(79, 17);
+            this.checkBolEven.TabIndex = 19;
+            this.checkBolEven.Text = "Baloncesto";
+            this.checkBolEven.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(153, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Fecha";
+            // 
+            // fechaEvent
+            // 
+            this.fechaEvent.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fechaEvent.Location = new System.Drawing.Point(156, 68);
+            this.fechaEvent.Name = "fechaEvent";
+            this.fechaEvent.Size = new System.Drawing.Size(138, 20);
+            this.fechaEvent.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(216, 33);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "vs";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(196, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Resultados";
+            // 
+            // resVEvento
+            // 
+            this.resVEvento.Location = new System.Drawing.Point(245, 30);
+            this.resVEvento.Name = "resVEvento";
+            this.resVEvento.Size = new System.Drawing.Size(49, 20);
+            this.resVEvento.TabIndex = 7;
+            // 
+            // resCEve
+            // 
+            this.resCEve.Location = new System.Drawing.Point(156, 30);
+            this.resCEve.Name = "resCEve";
+            this.resCEve.Size = new System.Drawing.Size(49, 20);
+            this.resCEve.TabIndex = 6;
+            // 
+            // comboCompeEvent
+            // 
+            this.comboCompeEvent.FormattingEnabled = true;
+            this.comboCompeEvent.Location = new System.Drawing.Point(8, 104);
+            this.comboCompeEvent.Name = "comboCompeEvent";
+            this.comboCompeEvent.Size = new System.Drawing.Size(121, 21);
+            this.comboCompeEvent.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 90);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Competición";
+            // 
+            // comboEquipoVisEve
+            // 
+            this.comboEquipoVisEve.FormattingEnabled = true;
+            this.comboEquipoVisEve.Location = new System.Drawing.Point(8, 67);
+            this.comboEquipoVisEve.Name = "comboEquipoVisEve";
+            this.comboEquipoVisEve.Size = new System.Drawing.Size(121, 21);
+            this.comboEquipoVisEve.TabIndex = 3;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 53);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Participante Visitante";
+            // 
+            // comboEquipoLocalEve
+            // 
+            this.comboEquipoLocalEve.FormattingEnabled = true;
+            this.comboEquipoLocalEve.Location = new System.Drawing.Point(8, 30);
+            this.comboEquipoLocalEve.Name = "comboEquipoLocalEve";
+            this.comboEquipoLocalEve.Size = new System.Drawing.Size(121, 21);
+            this.comboEquipoLocalEve.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Participante Local";
             // 
             // btDarApostado
             // 
@@ -809,38 +1164,362 @@
             // 
             this.tablaEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaEventos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaEventos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaEventos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.tablaEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaEventos.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaEventos.DefaultCellStyle = dataGridViewCellStyle35;
             this.tablaEventos.Dock = System.Windows.Forms.DockStyle.Top;
             this.tablaEventos.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.tablaEventos.Location = new System.Drawing.Point(3, 3);
             this.tablaEventos.Name = "tablaEventos";
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaEventos.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaEventos.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.tablaEventos.Size = new System.Drawing.Size(1011, 490);
             this.tablaEventos.TabIndex = 1;
             this.tablaEventos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEventos_CellDoubleClick);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(844, 305);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(55, 17);
+            this.checkBox6.TabIndex = 18;
+            this.checkBox6.Text = "Fútbol";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // pestanaApuestas
+            // 
+            this.pestanaApuestas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(164)))), ((int)(((byte)(216)))));
+            this.pestanaApuestas.Controls.Add(this.btAnular);
+            this.pestanaApuestas.Controls.Add(this.btMasApuesta);
+            this.pestanaApuestas.Controls.Add(this.btMenosApuesta);
+            this.pestanaApuestas.Controls.Add(this.btBuscarApuesta);
+            this.pestanaApuestas.Controls.Add(this.groupBox4);
+            this.pestanaApuestas.Controls.Add(this.tablaApuesta);
+            this.pestanaApuestas.Location = new System.Drawing.Point(4, 22);
+            this.pestanaApuestas.Name = "pestanaApuestas";
+            this.pestanaApuestas.Padding = new System.Windows.Forms.Padding(3);
+            this.pestanaApuestas.Size = new System.Drawing.Size(1017, 650);
+            this.pestanaApuestas.TabIndex = 4;
+            this.pestanaApuestas.Text = "Apuestas";
+            this.pestanaApuestas.Click += new System.EventHandler(this.pestanaApuestas_Click);
+            // 
+            // btMenosApuesta
+            // 
+            this.btMenosApuesta.BackColor = System.Drawing.Color.White;
+            this.btMenosApuesta.Location = new System.Drawing.Point(8, 621);
+            this.btMenosApuesta.Name = "btMenosApuesta";
+            this.btMenosApuesta.Size = new System.Drawing.Size(33, 23);
+            this.btMenosApuesta.TabIndex = 22;
+            this.btMenosApuesta.Text = "<";
+            this.btMenosApuesta.UseVisualStyleBackColor = false;
+            this.btMenosApuesta.Click += new System.EventHandler(this.btMenosApuesta_Click);
+            // 
+            // btBuscarApuesta
+            // 
+            this.btBuscarApuesta.BackColor = System.Drawing.Color.White;
+            this.btBuscarApuesta.Location = new System.Drawing.Point(312, 621);
+            this.btBuscarApuesta.Name = "btBuscarApuesta";
+            this.btBuscarApuesta.Size = new System.Drawing.Size(75, 23);
+            this.btBuscarApuesta.TabIndex = 21;
+            this.btBuscarApuesta.Text = "Buscar";
+            this.btBuscarApuesta.UseVisualStyleBackColor = false;
+            this.btBuscarApuesta.Click += new System.EventHandler(this.btBuscarApuesta_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.checkNoPagadoApuesta);
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.label19);
+            this.groupBox4.Controls.Add(this.textCoinsApuesta);
+            this.groupBox4.Controls.Add(this.textNickApuesta);
+            this.groupBox4.Controls.Add(this.textPronoApuesta);
+            this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.checkPagadoApuesta);
+            this.groupBox4.Controls.Add(this.checkFutApuesta);
+            this.groupBox4.Controls.Add(this.checkTodApuesta);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.checkMasApuesta);
+            this.groupBox4.Controls.Add(this.checkESApuesta);
+            this.groupBox4.Controls.Add(this.checkTenApuesta);
+            this.groupBox4.Controls.Add(this.checkBalApuesta);
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.fechaApuesta);
+            this.groupBox4.Controls.Add(this.comboCompeApuesta);
+            this.groupBox4.Controls.Add(this.label24);
+            this.groupBox4.Controls.Add(this.comboVPApuesta);
+            this.groupBox4.Controls.Add(this.label25);
+            this.groupBox4.Controls.Add(this.comboLPApuesta);
+            this.groupBox4.Controls.Add(this.label26);
+            this.groupBox4.Location = new System.Drawing.Point(393, 499);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(616, 145);
+            this.groupBox4.TabIndex = 20;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Filtros";
+            // 
+            // checkNoPagadoApuesta
+            // 
+            this.checkNoPagadoApuesta.AutoSize = true;
+            this.checkNoPagadoApuesta.Location = new System.Drawing.Point(153, 89);
+            this.checkNoPagadoApuesta.Name = "checkNoPagadoApuesta";
+            this.checkNoPagadoApuesta.Size = new System.Drawing.Size(79, 17);
+            this.checkNoPagadoApuesta.TabIndex = 34;
+            this.checkNoPagadoApuesta.Text = "No pagado";
+            this.checkNoPagadoApuesta.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(472, 94);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(92, 13);
+            this.label18.TabIndex = 33;
+            this.label18.Text = "Cantidad de coins";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(471, 58);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(81, 13);
+            this.label19.TabIndex = 32;
+            this.label19.Text = "Nick de usuario";
+            // 
+            // textCoinsApuesta
+            // 
+            this.textCoinsApuesta.Location = new System.Drawing.Point(474, 109);
+            this.textCoinsApuesta.Name = "textCoinsApuesta";
+            this.textCoinsApuesta.Size = new System.Drawing.Size(136, 20);
+            this.textCoinsApuesta.TabIndex = 30;
+            // 
+            // textNickApuesta
+            // 
+            this.textNickApuesta.Location = new System.Drawing.Point(474, 71);
+            this.textNickApuesta.Name = "textNickApuesta";
+            this.textNickApuesta.Size = new System.Drawing.Size(136, 20);
+            this.textNickApuesta.TabIndex = 29;
+            // 
+            // textPronoApuesta
+            // 
+            this.textPronoApuesta.Location = new System.Drawing.Point(473, 35);
+            this.textPronoApuesta.Name = "textPronoApuesta";
+            this.textPronoApuesta.Size = new System.Drawing.Size(137, 20);
+            this.textPronoApuesta.TabIndex = 28;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(471, 19);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(57, 13);
+            this.label20.TabIndex = 31;
+            this.label20.Text = "Pronostico";
+            // 
+            // checkPagadoApuesta
+            // 
+            this.checkPagadoApuesta.AutoSize = true;
+            this.checkPagadoApuesta.Location = new System.Drawing.Point(153, 67);
+            this.checkPagadoApuesta.Name = "checkPagadoApuesta";
+            this.checkPagadoApuesta.Size = new System.Drawing.Size(63, 17);
+            this.checkPagadoApuesta.TabIndex = 27;
+            this.checkPagadoApuesta.Text = "Pagado";
+            this.checkPagadoApuesta.UseVisualStyleBackColor = true;
+            // 
+            // checkFutApuesta
+            // 
+            this.checkFutApuesta.AutoSize = true;
+            this.checkFutApuesta.Location = new System.Drawing.Point(410, 35);
+            this.checkFutApuesta.Name = "checkFutApuesta";
+            this.checkFutApuesta.Size = new System.Drawing.Size(55, 17);
+            this.checkFutApuesta.TabIndex = 25;
+            this.checkFutApuesta.Text = "Fútbol";
+            this.checkFutApuesta.UseVisualStyleBackColor = true;
+            // 
+            // checkTodApuesta
+            // 
+            this.checkTodApuesta.AutoSize = true;
+            this.checkTodApuesta.Checked = true;
+            this.checkTodApuesta.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkTodApuesta.Location = new System.Drawing.Point(410, 80);
+            this.checkTodApuesta.Name = "checkTodApuesta";
+            this.checkTodApuesta.Size = new System.Drawing.Size(56, 17);
+            this.checkTodApuesta.TabIndex = 24;
+            this.checkTodApuesta.Text = "Todos";
+            this.checkTodApuesta.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(362, 14);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(50, 13);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Deportes";
+            // 
+            // checkMasApuesta
+            // 
+            this.checkMasApuesta.AutoSize = true;
+            this.checkMasApuesta.Location = new System.Drawing.Point(310, 80);
+            this.checkMasApuesta.Name = "checkMasApuesta";
+            this.checkMasApuesta.Size = new System.Drawing.Size(90, 17);
+            this.checkMasApuesta.TabIndex = 22;
+            this.checkMasApuesta.Text = "Mas deportes";
+            this.checkMasApuesta.UseVisualStyleBackColor = true;
+            // 
+            // checkESApuesta
+            // 
+            this.checkESApuesta.AutoSize = true;
+            this.checkESApuesta.Location = new System.Drawing.Point(310, 58);
+            this.checkESApuesta.Name = "checkESApuesta";
+            this.checkESApuesta.Size = new System.Drawing.Size(59, 17);
+            this.checkESApuesta.TabIndex = 21;
+            this.checkESApuesta.Text = "E-sport";
+            this.checkESApuesta.UseVisualStyleBackColor = true;
+            // 
+            // checkTenApuesta
+            // 
+            this.checkTenApuesta.AutoSize = true;
+            this.checkTenApuesta.Location = new System.Drawing.Point(410, 58);
+            this.checkTenApuesta.Name = "checkTenApuesta";
+            this.checkTenApuesta.Size = new System.Drawing.Size(52, 17);
+            this.checkTenApuesta.TabIndex = 20;
+            this.checkTenApuesta.Text = "Tenis";
+            this.checkTenApuesta.UseVisualStyleBackColor = true;
+            // 
+            // checkBalApuesta
+            // 
+            this.checkBalApuesta.AutoSize = true;
+            this.checkBalApuesta.Location = new System.Drawing.Point(310, 35);
+            this.checkBalApuesta.Name = "checkBalApuesta";
+            this.checkBalApuesta.Size = new System.Drawing.Size(79, 17);
+            this.checkBalApuesta.TabIndex = 19;
+            this.checkBalApuesta.Text = "Baloncesto";
+            this.checkBalApuesta.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(150, 16);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(37, 13);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "Fecha";
+            // 
+            // fechaApuesta
+            // 
+            this.fechaApuesta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fechaApuesta.Location = new System.Drawing.Point(153, 32);
+            this.fechaApuesta.Name = "fechaApuesta";
+            this.fechaApuesta.Size = new System.Drawing.Size(138, 20);
+            this.fechaApuesta.TabIndex = 10;
+            // 
+            // comboCompeApuesta
+            // 
+            this.comboCompeApuesta.FormattingEnabled = true;
+            this.comboCompeApuesta.Location = new System.Drawing.Point(8, 104);
+            this.comboCompeApuesta.Name = "comboCompeApuesta";
+            this.comboCompeApuesta.Size = new System.Drawing.Size(121, 21);
+            this.comboCompeApuesta.TabIndex = 5;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(10, 90);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(65, 13);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "Competición";
+            // 
+            // comboVPApuesta
+            // 
+            this.comboVPApuesta.FormattingEnabled = true;
+            this.comboVPApuesta.Location = new System.Drawing.Point(8, 67);
+            this.comboVPApuesta.Name = "comboVPApuesta";
+            this.comboVPApuesta.Size = new System.Drawing.Size(121, 21);
+            this.comboVPApuesta.TabIndex = 3;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(8, 53);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(106, 13);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Participante Visitante";
+            // 
+            // comboLPApuesta
+            // 
+            this.comboLPApuesta.FormattingEnabled = true;
+            this.comboLPApuesta.Location = new System.Drawing.Point(8, 30);
+            this.comboLPApuesta.Name = "comboLPApuesta";
+            this.comboLPApuesta.Size = new System.Drawing.Size(121, 21);
+            this.comboLPApuesta.TabIndex = 1;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 16);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(92, 13);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Participante Local";
+            // 
+            // tablaApuesta
+            // 
+            this.tablaApuesta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablaApuesta.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaApuesta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            this.tablaApuesta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaApuesta.DefaultCellStyle = dataGridViewCellStyle38;
+            this.tablaApuesta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tablaApuesta.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            this.tablaApuesta.Location = new System.Drawing.Point(3, 3);
+            this.tablaApuesta.Name = "tablaApuesta";
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaApuesta.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            this.tablaApuesta.Size = new System.Drawing.Size(1011, 490);
+            this.tablaApuesta.TabIndex = 2;
             // 
             // menu
             // 
@@ -863,256 +1542,27 @@
             this.toolStripSalir.Text = "Salir";
             this.toolStripSalir.Click += new System.EventHandler(this.toolStripSalir_Click);
             // 
-            // groupBox3
+            // btMasApuesta
             // 
-            this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.checkBox3);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.checkBox4);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.checkBox5);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(480, 499);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(534, 145);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Filtros";
+            this.btMasApuesta.BackColor = System.Drawing.Color.White;
+            this.btMasApuesta.Location = new System.Drawing.Point(47, 621);
+            this.btMasApuesta.Name = "btMasApuesta";
+            this.btMasApuesta.Size = new System.Drawing.Size(33, 23);
+            this.btMasApuesta.TabIndex = 23;
+            this.btMasApuesta.Text = ">";
+            this.btMasApuesta.UseVisualStyleBackColor = false;
+            this.btMasApuesta.Click += new System.EventHandler(this.btMasApuesta_Click);
             // 
-            // label7
+            // btAnular
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Participante Local";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(9, 67);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Participante Visitante";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(11, 104);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 5;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 90);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Competición";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(156, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(49, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(245, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(49, 20);
-            this.textBox2.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(196, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Resultados";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(216, 33);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "vs";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(156, 68);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(138, 20);
-            this.dateTimePicker1.TabIndex = 10;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(153, 52);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 13);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Fecha";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(156, 104);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(49, 20);
-            this.textBox3.TabIndex = 12;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(219, 104);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(49, 20);
-            this.textBox4.TabIndex = 13;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(283, 104);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(49, 20);
-            this.textBox5.TabIndex = 14;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(174, 91);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "1";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(236, 91);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(14, 13);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "X";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(300, 90);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 13);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "2";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(464, 58);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 17);
-            this.checkBox1.TabIndex = 24;
-            this.checkBox1.Text = "Todos";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(364, 80);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(90, 17);
-            this.checkBox2.TabIndex = 22;
-            this.checkBox2.Text = "Mas deportes";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(364, 58);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(59, 17);
-            this.checkBox3.TabIndex = 21;
-            this.checkBox3.Text = "E-sport";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(464, 35);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(52, 17);
-            this.checkBox4.TabIndex = 20;
-            this.checkBox4.Text = "Tenis";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(364, 35);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(79, 17);
-            this.checkBox5.TabIndex = 19;
-            this.checkBox5.Text = "Baloncesto";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(844, 305);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(55, 17);
-            this.checkBox6.TabIndex = 18;
-            this.checkBox6.Text = "Fútbol";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(416, 14);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(50, 13);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Deportes";
+            this.btAnular.BackColor = System.Drawing.Color.White;
+            this.btAnular.Location = new System.Drawing.Point(9, 499);
+            this.btAnular.Name = "btAnular";
+            this.btAnular.Size = new System.Drawing.Size(378, 23);
+            this.btAnular.TabIndex = 24;
+            this.btAnular.Text = "Anular apuesta";
+            this.btAnular.UseVisualStyleBackColor = false;
+            this.btAnular.Click += new System.EventHandler(this.btAnular_Click);
             // 
             // frmPrincipal
             // 
@@ -1123,6 +1573,7 @@
             this.ClientSize = new System.Drawing.Size(1025, 700);
             this.Controls.Add(this.toolStripContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1144,11 +1595,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablaParticipante)).EndInit();
             this.tabEventos.ResumeLayout(false);
             this.tabEventos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEventos)).EndInit();
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEventos)).EndInit();
+            this.pestanaApuestas.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaApuesta)).EndInit();
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1211,30 +1666,66 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btDarApostado;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkTodosEven;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkMasEven;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkESEven;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.TextBox cuota2Evento;
+        private System.Windows.Forms.CheckBox checkTeniEve;
+        private System.Windows.Forms.TextBox cuotaXEvento;
+        private System.Windows.Forms.TextBox cuota1Evento;
+        private System.Windows.Forms.CheckBox checkBolEven;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fechaEvent;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox resVEvento;
+        private System.Windows.Forms.TextBox resCEve;
+        private System.Windows.Forms.ComboBox comboCompeEvent;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboEquipoVisEve;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboEquipoLocalEve;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkFutEve;
+        private System.Windows.Forms.CheckBox checkPagado;
+        private System.Windows.Forms.CheckBox checkActEven;
+        private System.Windows.Forms.Button btBuscar;
+        private System.Windows.Forms.Button btMasEvento;
+        private System.Windows.Forms.Button btMenosEvento;
+        private System.Windows.Forms.TabPage pestanaApuestas;
+        private System.Windows.Forms.Button btBuscarApuesta;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textCoinsApuesta;
+        private System.Windows.Forms.TextBox textNickApuesta;
+        private System.Windows.Forms.TextBox textPronoApuesta;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.CheckBox checkPagadoApuesta;
+        private System.Windows.Forms.CheckBox checkFutApuesta;
+        private System.Windows.Forms.CheckBox checkTodApuesta;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckBox checkMasApuesta;
+        private System.Windows.Forms.CheckBox checkESApuesta;
+        private System.Windows.Forms.CheckBox checkTenApuesta;
+        private System.Windows.Forms.CheckBox checkBalApuesta;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DateTimePicker fechaApuesta;
+        private System.Windows.Forms.ComboBox comboCompeApuesta;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox comboVPApuesta;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox comboLPApuesta;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DataGridView tablaApuesta;
+        private System.Windows.Forms.CheckBox checkNoPagadoApuesta;
+        private System.Windows.Forms.Button btMenosApuesta;
+        private System.Windows.Forms.Button btMasApuesta;
+        private System.Windows.Forms.Button btAnular;
     }
 }

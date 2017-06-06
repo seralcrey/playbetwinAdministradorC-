@@ -95,6 +95,7 @@ namespace PlayBetWin_Administrador.Formularios
                         }
                         b.Desconectar();
                         padre.rellenarTablaParticipantes();
+                        this.Close();
                     }
                     else
                     {

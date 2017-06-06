@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbrirEvento));
             this.label10 = new System.Windows.Forms.Label();
             this.combCompeticion = new System.Windows.Forms.ComboBox();
             this.btEditar = new System.Windows.Forms.Button();
@@ -241,6 +242,7 @@
             // checkActivado
             // 
             this.checkActivado.AutoSize = true;
+            this.checkActivado.Enabled = false;
             this.checkActivado.Location = new System.Drawing.Point(14, 267);
             this.checkActivado.Name = "checkActivado";
             this.checkActivado.Size = new System.Drawing.Size(68, 17);
@@ -315,6 +317,7 @@
             this.Controls.Add(this.equipoVisi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.equipoCasa);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAbrirEvento";
             this.Text = "Evento";
             this.ResumeLayout(false);

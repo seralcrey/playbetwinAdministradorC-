@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.textUsuario = new System.Windows.Forms.TextBox();
             this.btIniciar = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
@@ -118,6 +119,7 @@
             this.Controls.Add(this.textPass);
             this.Controls.Add(this.textUsuario);
             this.Controls.Add(this.logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";

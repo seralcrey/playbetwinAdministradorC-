@@ -173,6 +173,7 @@ namespace PlayBetWin_Administrador.Formularios
             textX.Enabled = true;
             resCasa.Enabled = true;
             resVisi.Enabled = true;
+            checkActivado.Enabled = true;
         }
 
         private void btGuardar_Click(object sender, EventArgs e)
