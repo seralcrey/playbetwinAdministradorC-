@@ -140,17 +140,21 @@ namespace PlayBetWin_Administrador.Formularios
 
                     b.modificarTablas("UPDATE eventos SET resultado_casa=" + ((resC.Text.ToString().Length > 0) ? resC.Text : "NULL") + ",resultado_visitante=" + ((resV.Text.ToString().Length > 0) ? resV.Text : "NULL") + " , pagado=true WHERE id=" + evento.id + ";");
 
-                    List<List<String>> apuestas = b.cogerLista("SELECT id_usuario,coins,pronostico FROM playbetwin.apuestas where id_evento=" + evento.id + ";");
+                    double cuotaGanada = Double.Parse(b.cogerLista("select apuesta_"+ pronosFinal +" from eventos where id=" + evento.id + ";")[0][0]);
+
+
+
+                    List <List<String>> apuestas = b.cogerLista("SELECT id_usuario,coins,pronostico FROM playbetwin.apuestas where id_evento=" + evento.id + ";");
 
                     for (int i = 0; i < apuestas.Count; i++)
                     {
                         String id_usu = apuestas[i][0];
-                        String coins = apuestas[i][1];
+                        double coins = Double.Parse(apuestas[i][1]);
                         String pronos = apuestas[i][2];
 
                         if (pronos.Equals(pronosFinal))
                         {
-                            b.modificarTablas("UPDATE usuarios set coins = coins+"+ coins +" WHERE id=" + id_usu + ";");
+                            b.modificarTablas("UPDATE usuarios set coins = coins+"+ (coins*cuotaGanada) +" WHERE id=" + id_usu + ";");
                         }
                         
                     }

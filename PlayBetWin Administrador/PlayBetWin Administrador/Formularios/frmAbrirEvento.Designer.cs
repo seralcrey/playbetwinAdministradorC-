@@ -47,7 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.equipoCasa = new System.Windows.Forms.ComboBox();
             this.btGuardar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.checkActivado = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.resCasa = new System.Windows.Forms.TextBox();
@@ -228,17 +227,6 @@
             this.btGuardar.UseVisualStyleBackColor = false;
             this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(101, 343);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 49;
-            this.button2.Text = "Borrar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // checkActivado
             // 
             this.checkActivado.AutoSize = true;
@@ -298,7 +286,6 @@
             this.Controls.Add(this.resCasa);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkActivado);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.combCompeticion);
@@ -318,7 +305,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.equipoCasa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAbrirEvento";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Evento";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -345,7 +336,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox equipoCasa;
         private System.Windows.Forms.Button btGuardar;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkActivado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox resCasa;

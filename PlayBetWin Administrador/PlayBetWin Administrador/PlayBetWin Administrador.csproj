@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexiones\BaseDatos.cs" />
+    <Compile Include="Formularios\frAnadirPremio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frAnadirPremio.Designer.cs">
+      <DependentUpon>frAnadirPremio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmAbrirCompeticion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,18 @@
     </Compile>
     <Compile Include="Formularios\frmAbrirParticipante.Designer.cs">
       <DependentUpon>frmAbrirParticipante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAbrirPremio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAbrirPremio.Designer.cs">
+      <DependentUpon>frmAbrirPremio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAbrirProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAbrirProducto.Designer.cs">
+      <DependentUpon>frmAbrirProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmAnadirCompeticion.cs">
       <SubType>Form</SubType>
@@ -98,6 +116,18 @@
     <Compile Include="Formularios\frmAnadirParticipante.Designer.cs">
       <DependentUpon>frmAnadirParticipante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAnadirProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirProducto.Designer.cs">
+      <DependentUpon>frmAnadirProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirPublicidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAnadirPublicidad.Designer.cs">
+      <DependentUpon>frmAnadirPublicidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,8 +150,13 @@
     <Compile Include="Modelos\Participante.cs" />
     <Compile Include="Modelos\Competicion.cs" />
     <Compile Include="Modelos\Deporte.cs" />
+    <Compile Include="Modelos\Premio.cs" />
+    <Compile Include="Modelos\Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frAnadirPremio.resx">
+      <DependentUpon>frAnadirPremio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAbrirCompeticion.resx">
       <DependentUpon>frmAbrirCompeticion.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +169,12 @@
     <EmbeddedResource Include="Formularios\frmAbrirParticipante.resx">
       <DependentUpon>frmAbrirParticipante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAbrirPremio.resx">
+      <DependentUpon>frmAbrirPremio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAbrirProducto.resx">
+      <DependentUpon>frmAbrirProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAnadirCompeticion.resx">
       <DependentUpon>frmAnadirCompeticion.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAnadirParticipante.resx">
       <DependentUpon>frmAnadirParticipante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAnadirProducto.resx">
+      <DependentUpon>frmAnadirProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAnadirPublicidad.resx">
+      <DependentUpon>frmAnadirPublicidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

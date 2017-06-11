@@ -26,6 +26,9 @@ namespace PlayBetWin_Administrador
             rellenarCampoBusquedaEvento();
             rellenarTablaEventos();
             rellenarTablaApuestas();
+            rellenarTablaPremios();
+            rellenarTablaProducto();
+            rellenarTablaPublicidad();
             botonesCompe();
             botonesPart();
             botonesEven();
@@ -1190,6 +1193,298 @@ namespace PlayBetWin_Administrador
             else if (result == DialogResult.Cancel)
             {
             }
+        }
+
+        /**************************************************
+         *                    Premios
+         *************************************************/
+
+        public void rellenarTablaPremios()
+        {
+            BaseDatos b = new BaseDatos();
+            int r = b.Conectar();
+
+            if (r == -1)
+            {
+                MessageBox.Show("No se ha podido establecer conexión con la BD");
+            }
+            else
+            {
+                String where = "";
+
+                if (checkVerDesactivado.Checked)
+                {
+                    where += " true ";
+                } else
+                {
+                    where += " activado = true ";
+                }
+
+                if (textNombrePremio.Text != "")
+                {
+                    where += " and nombre LIKE '%" + textNombrePremio.Text + "%' ";
+                }
+
+                if (textCoinsPremios.Text != "")
+                {
+                    where += " and coins = " + textCoinsPremios.Text ;
+                }
+
+                if (textIDPremio.Text != "")
+                {
+                    where += " and id = " + textIDPremio.Text;
+                }
+
+                List<List<String>> deportes = b.cogerLista("select id, nombre,coins, activado, imagen from premios where " + where);
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("ID").ReadOnly = true;
+                dt.Columns.Add("Nombre").ReadOnly = true;
+                dt.Columns.Add("Coins").ReadOnly = true;
+                dt.Columns.Add("Activado").ReadOnly = true;
+                dt.Columns.Add("Imagen").ReadOnly = true;
+
+                tablaPremios.DataSource = dt;
+                for (int i = 0; i < deportes.Count; i++)
+                {
+                    DataRow row = dt.NewRow();
+                    row["ID"] = deportes[i][0];
+                    row["Nombre"] = deportes[i][1];
+                    row["Coins"] = deportes[i][2];
+                    row["Activado"] = deportes[i][3];
+                    row["Imagen"] = deportes[i][4];
+                    dt.Rows.Add(row);
+                }
+            }
+
+            b.Desconectar();
+        }
+
+        private void btAnadirPremio_Click(object sender, EventArgs e)
+        {
+            new frAnadirPremio(this).ShowDialog();
+        }
+
+        private void abrirPremio()
+        {
+            int id = Int32.Parse(tablaPremios.CurrentRow.Cells[0].Value.ToString());
+            string nombre = tablaPremios.CurrentRow.Cells[1].Value.ToString();
+            int coins = Int32.Parse(tablaPremios.CurrentRow.Cells[2].Value.ToString());
+            bool activado = Boolean.Parse(tablaPremios.CurrentRow.Cells[3].Value.ToString());
+            bool imagen = Boolean.Parse(tablaPremios.CurrentRow.Cells[4].Value.ToString());
+
+            Premio premio = new Premio(id, nombre, coins, activado, imagen);
+
+            frmAbrirPremio frm = new frmAbrirPremio(this, premio);
+            frm.ShowDialog(this);
+        }
+
+        private void btAbrirPremio_Click(object sender, EventArgs e)
+        {
+            abrirPremio();
+        }
+
+        private void tablaPremios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            abrirPremio();
+        }
+
+        private void btBuscarPremios_Click(object sender, EventArgs e)
+        {
+            rellenarTablaPremios();
+        }
+
+        /**************************************************
+         *                    Productos
+         *************************************************/
+
+        public void rellenarTablaProducto()
+        {
+            BaseDatos b = new BaseDatos();
+            int r = b.Conectar();
+
+            if (r == -1)
+            {
+                MessageBox.Show("No se ha podido establecer conexión con la BD");
+            }
+            else
+            {
+                String where = "";
+
+                if (checkdesactivadosProd.Checked)
+                {
+                    where += " true ";
+                }
+                else
+                {
+                    where += " activado = true ";
+                }
+
+                if (textNombreProductos.Text != "")
+                {
+                    where += " and nombre LIKE '%" + textNombreProductos.Text + "%' ";
+                }
+
+                if (textCoinsProductos.Text != "")
+                {
+                    where += " and coins = " + textCoinsProductos.Text;
+                }
+
+                if (textIDProductos.Text != "")
+                {
+                    where += " and id = " + textIDProductos.Text;
+                }
+
+                if (textPrecio.Text != "")
+                {
+                    where += " and precio = " + textPrecio.Text;
+                }
+
+                List<List<String>> deportes = b.cogerLista("select id, nombre, precio, coins, stock, activado from productos where " + where);
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("ID").ReadOnly = true;
+                dt.Columns.Add("Nombre").ReadOnly = true;
+                dt.Columns.Add("Precio").ReadOnly = true;
+                dt.Columns.Add("Coins").ReadOnly = true;
+                dt.Columns.Add("Stock").ReadOnly = true;
+                dt.Columns.Add("Activado").ReadOnly = true;
+                
+
+
+                tablaProductos.DataSource = dt;
+                for (int i = 0; i < deportes.Count; i++)
+                {
+                    DataRow row = dt.NewRow();
+                    row["ID"] = deportes[i][0];
+                    row["Nombre"] = deportes[i][1];
+                    row["Coins"] = deportes[i][3];
+                    row["Stock"] = deportes[i][4];
+                    row["Activado"] = deportes[i][5];
+                    row["Precio"] = deportes[i][2];
+                    dt.Rows.Add(row);
+                }
+            }
+
+            b.Desconectar();
+        }
+
+        private void btAnadirProducto_Click(object sender, EventArgs e)
+        {
+            new frmAnadirProducto(this).ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            rellenarTablaProducto();
+        }
+
+        private void btAbrirProducto_Click(object sender, EventArgs e)
+        {
+            abrirProducto();
+        }
+
+        private void abrirProducto()
+        {
+            int id = Int32.Parse(tablaProductos.CurrentRow.Cells[0].Value.ToString());
+            string nombre = tablaProductos.CurrentRow.Cells[1].Value.ToString();
+            Double precio = Double.Parse(tablaProductos.CurrentRow.Cells[2].Value.ToString());
+            int coins = Int32.Parse(tablaProductos.CurrentRow.Cells[3].Value.ToString());
+            int stock = Int32.Parse(tablaProductos.CurrentRow.Cells[4].Value.ToString());
+            bool activado = Boolean.Parse(tablaProductos.CurrentRow.Cells[5].Value.ToString());
+            bool imagen = true;
+
+            Producto pro = new Producto(id, nombre, coins, stock ,precio, activado, imagen);
+
+            frmAbrirProducto frm = new frmAbrirProducto(this, pro);
+            frm.ShowDialog(this);
+        }
+
+        private void tablaProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            abrirProducto();
+        }
+
+
+        /**************************************************
+         *                    Publicidad
+         *************************************************/
+
+        public void rellenarTablaPublicidad()
+        {
+            BaseDatos b = new BaseDatos();
+            int r = b.Conectar();
+
+            if (r == -1)
+            {
+                MessageBox.Show("No se ha podido establecer conexión con la BD");
+            }
+            else
+            {
+                String where = " ";
+
+                if (checkActivadoPubli.Checked)
+                {
+                    where += " true ";
+                }
+                else
+                {
+                    where += " activado = true ";
+                }
+
+                if (textNombrePubli.Text != "")
+                {
+                    where += " and nombre LIKE '%" + textNombrePubli.Text + "%' ";
+                }
+
+                if (textURL.Text != "")
+                {
+                    where += " and url LIKE '%" + textURL.Text + "%' ";
+                }
+
+                if (textCoinsPubli.Text != "")
+                {
+                    where += " and coins = " + textCoinsPubli.Text;
+                }
+
+                if (textIDPubli.Text != "")
+                {
+                    where += " and id = " + textIDPubli.Text;
+                }
+
+                List<List<String>> deportes = b.cogerLista("select id, nombre, url, coins, activado from publicidades where " + where);
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("ID").ReadOnly = true;
+                dt.Columns.Add("Nombre").ReadOnly = true;
+                dt.Columns.Add("URL").ReadOnly = true;
+                dt.Columns.Add("Coins").ReadOnly = true;
+                dt.Columns.Add("Activado").ReadOnly = true;
+
+                tablaPublicidad.DataSource = dt;
+                for (int i = 0; i < deportes.Count; i++)
+                {
+                    DataRow row = dt.NewRow();
+                    row["ID"] = deportes[i][0];
+                    row["Nombre"] = deportes[i][1];
+                    row["Coins"] = deportes[i][3];
+                    row["Activado"] = deportes[i][4];
+                    row["URL"] = deportes[i][2];
+                    dt.Rows.Add(row);
+                }
+            }
+
+            b.Desconectar();
+        }
+
+        private void btBuscarPubli_Click(object sender, EventArgs e)
+        {
+            rellenarTablaPublicidad();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new frmAnadirPublicidad(this).ShowDialog();
         }
     }
 

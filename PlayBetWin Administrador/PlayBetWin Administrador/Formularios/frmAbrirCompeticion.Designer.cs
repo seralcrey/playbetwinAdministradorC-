@@ -34,7 +34,6 @@
             this.comboDeportes = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
-            this.btBorrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.chectActivado = new System.Windows.Forms.CheckBox();
             this.btGuardar = new System.Windows.Forms.Button();
@@ -86,21 +85,10 @@
             this.textNombre.Size = new System.Drawing.Size(260, 20);
             this.textNombre.TabIndex = 5;
             // 
-            // btBorrar
-            // 
-            this.btBorrar.BackColor = System.Drawing.Color.White;
-            this.btBorrar.Location = new System.Drawing.Point(116, 226);
-            this.btBorrar.Name = "btBorrar";
-            this.btBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btBorrar.TabIndex = 10;
-            this.btBorrar.Text = "Borrar";
-            this.btBorrar.UseVisualStyleBackColor = false;
-            this.btBorrar.Click += new System.EventHandler(this.btBorrar_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(35, 226);
+            this.button2.Location = new System.Drawing.Point(116, 226);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 11;
@@ -139,7 +127,6 @@
             this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.chectActivado);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btBorrar);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboDeportes);
@@ -149,6 +136,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAbrirCompeticion";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Abrir Competicion";
             this.ResumeLayout(false);
@@ -163,7 +151,6 @@
         private System.Windows.Forms.ComboBox comboDeportes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.Button btBorrar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox chectActivado;
         private System.Windows.Forms.Button btGuardar;

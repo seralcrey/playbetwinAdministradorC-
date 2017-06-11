@@ -103,6 +103,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAnadirDeporte";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Añadir deporte";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAnadirDeporte_FormClosed);
             this.ResumeLayout(false);

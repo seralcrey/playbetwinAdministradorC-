@@ -32,7 +32,6 @@
             this.btGuardar = new System.Windows.Forms.Button();
             this.chectActivado = new System.Windows.Forms.CheckBox();
             this.btEditar = new System.Windows.Forms.Button();
-            this.btBorrar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboDeportes = new System.Windows.Forms.ComboBox();
@@ -65,24 +64,13 @@
             // btEditar
             // 
             this.btEditar.BackColor = System.Drawing.Color.White;
-            this.btEditar.Location = new System.Drawing.Point(35, 227);
+            this.btEditar.Location = new System.Drawing.Point(116, 227);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(75, 23);
             this.btEditar.TabIndex = 20;
             this.btEditar.Text = "Editar";
             this.btEditar.UseVisualStyleBackColor = false;
             this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
-            // 
-            // btBorrar
-            // 
-            this.btBorrar.BackColor = System.Drawing.Color.White;
-            this.btBorrar.Location = new System.Drawing.Point(116, 227);
-            this.btBorrar.Name = "btBorrar";
-            this.btBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btBorrar.TabIndex = 19;
-            this.btBorrar.Text = "Borrar";
-            this.btBorrar.UseVisualStyleBackColor = false;
-            this.btBorrar.Click += new System.EventHandler(this.btBorrar_Click);
             // 
             // btCancelar
             // 
@@ -139,7 +127,6 @@
             this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.chectActivado);
             this.Controls.Add(this.btEditar);
-            this.Controls.Add(this.btBorrar);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboDeportes);
@@ -149,6 +136,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAbrirParticipante";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Abrir participante";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,7 +149,6 @@
         private System.Windows.Forms.Button btGuardar;
         private System.Windows.Forms.CheckBox chectActivado;
         private System.Windows.Forms.Button btEditar;
-        private System.Windows.Forms.Button btBorrar;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboDeportes;

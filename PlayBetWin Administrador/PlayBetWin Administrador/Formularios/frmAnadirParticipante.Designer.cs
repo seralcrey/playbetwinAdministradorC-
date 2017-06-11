@@ -108,6 +108,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAnadirParticipante";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Añadir participante";
             this.ResumeLayout(false);
             this.PerformLayout();

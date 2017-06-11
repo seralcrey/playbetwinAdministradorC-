@@ -155,7 +155,11 @@
             this.Controls.Add(this.totalApostado);
             this.Controls.Add(this.btCancelar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRealizarPagos";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Repartir coins";
             this.ResumeLayout(false);
             this.PerformLayout();

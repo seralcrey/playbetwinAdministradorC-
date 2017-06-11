@@ -244,6 +244,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAnadirEvento";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Añadir Evento";
             this.ResumeLayout(false);
             this.PerformLayout();

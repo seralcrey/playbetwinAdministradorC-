@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.btEditar = new System.Windows.Forms.Button();
-            this.btBorrar = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
             this.btGuardar = new System.Windows.Forms.Button();
             this.checActivado = new System.Windows.Forms.CheckBox();
@@ -58,24 +57,13 @@
             // btEditar
             // 
             this.btEditar.BackColor = System.Drawing.Color.White;
-            this.btEditar.Location = new System.Drawing.Point(15, 226);
+            this.btEditar.Location = new System.Drawing.Point(96, 226);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(95, 23);
             this.btEditar.TabIndex = 2;
             this.btEditar.Text = "Habilitar editar";
             this.btEditar.UseVisualStyleBackColor = false;
             this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
-            // 
-            // btBorrar
-            // 
-            this.btBorrar.BackColor = System.Drawing.Color.White;
-            this.btBorrar.Location = new System.Drawing.Point(116, 226);
-            this.btBorrar.Name = "btBorrar";
-            this.btBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btBorrar.TabIndex = 3;
-            this.btBorrar.Text = "Borrar";
-            this.btBorrar.UseVisualStyleBackColor = false;
-            this.btBorrar.Click += new System.EventHandler(this.btBorrar_Click);
             // 
             // btSalir
             // 
@@ -124,7 +112,6 @@
             this.Controls.Add(this.checActivado);
             this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.btSalir);
-            this.Controls.Add(this.btBorrar);
             this.Controls.Add(this.btEditar);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.label1);
@@ -133,6 +120,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAbrirDeporte";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Editar deporte";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,7 +132,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.Button btEditar;
-        private System.Windows.Forms.Button btBorrar;
         private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.Button btGuardar;
         private System.Windows.Forms.CheckBox checActivado;

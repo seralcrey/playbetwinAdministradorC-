@@ -113,6 +113,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAnadirCompeticion";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Añadir competición";
             this.ResumeLayout(false);
             this.PerformLayout();
